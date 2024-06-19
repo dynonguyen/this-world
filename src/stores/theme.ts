@@ -1,28 +1,31 @@
 import { defineStore } from 'pinia'
-import { onMounted, ref } from 'vue'
+import { onMounted, readonly, ref } from 'vue'
 import { LS_KEY } from '~/constants/key'
 
 type Mode = 'light' | 'dark'
 
+const changeAndPersistTheme = (mode: Mode) => {
+  document.documentElement.setAttribute('data-theme', mode)
+  document.documentElement.classList.add(mode)
+  document.documentElement.classList.remove(mode === 'dark' ? 'light' : 'dark')
+  localStorage.setItem(LS_KEY.THEME, mode)
+}
+
 export const useThemeMode = defineStore('themeMode', () => {
   const mode = ref<Mode>(localStorage.getItem(LS_KEY.THEME) === 'dark' ? 'dark' : 'light')
 
-  onMounted(() => {
-    document.documentElement.setAttribute('data-theme', mode.value)
-  })
+  onMounted(() => changeAndPersistTheme(mode.value))
 
   function setTheme(newMode: Mode) {
-    if (newMode === mode.value) return
-
-    mode.value = newMode
-
-    localStorage.setItem(LS_KEY.THEME, newMode)
-    document.documentElement.setAttribute('data-theme', newMode)
+    if (newMode !== mode.value) {
+      mode.value = newMode
+      changeAndPersistTheme(newMode)
+    }
   }
 
   function toggleTheme() {
     setTheme(mode.value === 'light' ? 'dark' : 'light')
   }
 
-  return { mode, setTheme, toggleTheme }
+  return { mode: readonly(mode), setTheme, toggleTheme }
 })

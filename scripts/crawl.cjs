@@ -10,226 +10,160 @@ const cheerio = require('cheerio')
 
 const moreInfos = {
   Afghanistan: {
-    vieName: 'Afghanistan; Áp-ga-ni-xtan'
+    vieName: 'Áp-ga-ni-xtan'
   },
   'Åland Islands': {
     vieName: 'Åland Islands'
   },
   Albania: {
-    vieName: 'Albania; An-ba-ni'
+    vieName: 'An-ba-ni'
   },
   Algeria: {
-    vieName: 'Algeria; An-giê-ri'
-  },
-  'American Samoa': {
-    vieName: 'American Samoa'
-  },
-  Andorra: {
-    vieName: 'Andorra'
+    vieName: 'An-giê-ri'
   },
   Angola: {
-    vieName: 'Angola; Ăng-gô-la'
-  },
-  Anguilla: {
-    vieName: 'Anguilla'
-  },
-  Antarctica: {
-    vieName: 'Antarctica'
+    vieName: 'Ăng-gô-la'
   },
   'Antigua and Barbuda': {
-    vieName: 'Antigua và Barbuda; An-ti-gua và Bác-bu-đa'
+    vieName: 'An-ti-gua và Bác-bu-đa'
   },
   Argentina: {
-    vieName: 'Argentina; Ác-hen-ti-na'
+    vieName: 'Ác-hen-ti-na'
   },
   Armenia: {
-    vieName: 'Armenia; Ác-mê-ni-a'
-  },
-  Aruba: {
-    vieName: 'Aruba'
+    vieName: 'Ác-mê-ni-a'
   },
   Australia: {
-    vieName: 'Úc; Australia; Ô-xtrây-li-a'
+    vieName: 'Úc; Ô-xtrây-li-a'
   },
   Austria: {
     vieName: 'Áo'
   },
   Azerbaijan: {
-    vieName: 'Azerbaijan; A-déc-bai-dan'
+    vieName: 'A-déc-bai-dan'
   },
   Bahamas: {
-    vieName: 'Bahamas; Ba-ha-mát'
+    vieName: 'Ba-ha-mát'
   },
   Bahrain: {
-    vieName: 'Bahrain; Ba-ranh'
+    vieName: 'Ba-ranh'
   },
   Bangladesh: {
-    vieName: 'Bangladesh; Băng-la-đét'
+    vieName: 'Băng-la-đét'
   },
   Barbados: {
-    vieName: 'Barbados; Bác-ba-đốt'
+    vieName: 'Bác-ba-đốt'
   },
   Belarus: {
-    vieName: 'Belarus; Bê-la-rút'
+    vieName: 'Bê-la-rút'
   },
   Belgium: {
     vieName: 'Bỉ'
   },
   Belize: {
-    vieName: 'Belize; Bê-li-xê'
+    vieName: 'Bê-li-xê'
   },
   Benin: {
-    vieName: 'Benin; Bê-nanh'
-  },
-  Bermuda: {
-    vieName: 'Bermuda'
+    vieName: 'Bê-nanh'
   },
   Bhutan: {
-    vieName: 'Bhutan; Bu-tan'
+    vieName: 'Bu-tan'
   },
   Bolivia: {
-    vieName: 'Bolivia; Bô-li-vi-a'
+    vieName: 'Bô-li-vi-a'
   },
   'Bosnia and Herzegovina': {
-    vieName: 'Bosnia và Herzegovina; Bô-xnia Héc-dê-gô-vi-na'
+    vieName: 'Bô-xnia Héc-dê-gô-vi-na'
   },
   Botswana: {
-    vieName: 'Botswana; Bốt-xoa-na'
-  },
-  'Bouvet Island': {
-    vieName: 'Bouvet Island'
+    vieName: 'Bốt-xoa-na'
   },
   Brazil: {
-    vieName: 'Brazil; Bra-xin'
-  },
-  'British Indian Ocean Territory': {
-    vieName: 'British Indian Ocean Territory'
-  },
-  'British Virgin Islands': {
-    vieName: 'British Virgin Islands'
-  },
-  Brunei: {
-    vieName: 'Brunei'
+    vieName: 'Bra-xin'
   },
   Bulgaria: {
-    vieName: 'Bulgaria; Bun-ga-ri'
+    vieName: 'Bun-ga-ri'
   },
   'Burkina Faso': {
-    vieName: 'Burkina Faso; Buốc-ki-na Pha-xô'
+    vieName: 'Buốc-ki-na Pha-xô'
   },
   Burundi: {
-    vieName: 'Burundi; Bu-run-đi'
+    vieName: 'Bu-run-đi'
   },
   Cambodia: {
-    vieName: 'Campuchia; Cam-pu-chia'
+    vieName: 'Cam-pu-chia'
   },
   Cameroon: {
-    vieName: 'Cameroon; Ca-mơ-run'
+    vieName: 'Ca-mơ-run'
   },
   Canada: {
-    vieName: 'Canada; Ca-na-đa'
-  },
-  'Cape Verde': {
-    vieName: 'Cape Verde'
-  },
-  'Caribbean Netherlands': {
-    vieName: 'Caribbean Netherlands'
-  },
-  'Cayman Islands': {
-    vieName: 'Cayman Islands'
+    vieName: 'Ca-na-đa'
   },
   'Central African Republic': {
     vieName: 'Cộng hòa Trung Phi'
   },
   Chad: {
-    vieName: 'Chad; Sát'
+    vieName: 'Sát'
   },
   Chile: {
-    vieName: 'Chile; Chi-lê'
+    vieName: 'Chi-lê'
   },
   China: {
     vieName: 'Trung Quốc; Trung Hoa'
   },
-  'Christmas Island': {
-    vieName: 'Christmas Island'
-  },
-  'Cocos (Keeling) Islands': {
-    vieName: 'Cocos (Keeling) Islands'
-  },
   Colombia: {
-    vieName: 'Colombia; Cô-lôm-bi-a'
+    vieName: 'Cô-lôm-bi-a'
   },
   Comoros: {
-    vieName: 'Comoros; Cô-mo'
-  },
-  'Cook Islands': {
-    vieName: 'Cook Islands'
+    vieName: 'Cô-mo'
   },
   'Costa Rica': {
-    vieName: 'Costa Rica; Cô-xta Ri-ca'
+    vieName: 'Cô-xta Ri-ca'
   },
   Croatia: {
-    vieName: 'Croatia; Crô-a-ti-a'
+    vieName: 'Crô-a-ti-a'
   },
   Cuba: {
-    vieName: 'Cuba; Cu-ba'
-  },
-  Curaçao: {
-    vieName: 'Curaçao'
+    vieName: 'Cu-ba'
   },
   Cyprus: {
     vieName: 'Síp; Cộng hòa Síp'
-  },
-  Czechia: {
-    vieName: 'Czechia'
   },
   Denmark: {
     vieName: 'Đan Mạch'
   },
   Djibouti: {
-    vieName: 'Djibouti; Gi-bu-ti'
+    vieName: 'Gi-bu-ti'
   },
   Dominica: {
-    vieName: 'Dominica; Đô-mi-ni-ca-na'
+    vieName: 'Đô-mi-ni-ca-na'
   },
   'Dominican Republic': {
-    vieName: 'Cộng hòa Dominican; Cộng hòa  Đô-mi-ni-ca-na'
-  },
-  'DR Congo': {
-    vieName: 'DR Congo'
+    vieName: 'Cộng hòa Đô-mi-ni-ca-na'
   },
   Ecuador: {
-    vieName: 'Ecuador; Ê-cu-a-đo'
+    vieName: 'Ê-cu-a-đo'
   },
   Egypt: {
     vieName: 'Ai Cập'
   },
   'El Salvador': {
-    vieName: 'El Salvador; En Xan-va-đo'
+    vieName: 'En Xan-va-đo'
   },
   'Equatorial Guinea': {
-    vieName: 'Guinea Xích đạo; Ghi-xê Xích đạo'
+    vieName: 'Ghi-xê Xích đạo'
   },
   Eritrea: {
-    vieName: 'Eritrea; Ê-ri-tơ-rê-a'
+    vieName: 'Ê-ri-tơ-rê-a'
   },
   Estonia: {
-    vieName: 'Estonia; E-xtô-ni-a'
-  },
-  Eswatini: {
-    vieName: 'Eswatini'
+    vieName: 'E-xtô-ni-a'
   },
   Ethiopia: {
-    vieName: 'Ethiopia; Ê-ti-ô-pi-a'
-  },
-  'Falkland Islands': {
-    vieName: 'Falkland Islands'
-  },
-  'Faroe Islands': {
-    vieName: 'Faroe Islands'
+    vieName: 'Ê-ti-ô-pi-a'
   },
   Fiji: {
-    vieName: 'Fiji; Phi-gi'
+    vieName: 'Phi-gi'
   },
   Finland: {
     vieName: 'Phần Lan'
@@ -237,110 +171,83 @@ const moreInfos = {
   France: {
     vieName: 'Pháp'
   },
-  'French Guiana': {
-    vieName: 'French Guiana'
-  },
-  'French Polynesia': {
-    vieName: 'French Polynesia'
-  },
-  'French Southern and Antarctic Lands': {
-    vieName: 'French Southern and Antarctic Lands'
-  },
   Gabon: {
-    vieName: 'Gabon; Ga-bông'
-  },
-  Gambia: {
-    vieName: 'Gambia'
+    vieName: 'Ga-bông'
   },
   Georgia: {
-    vieName: 'Gruzia; Giê-oóc-gi-a; Georgia (ít phổ biến)'
+    vieName: 'Giê-oóc-gi-a'
   },
   Germany: {
     vieName: 'Đức'
   },
   Ghana: {
-    vieName: 'Ghana; Gha-na'
-  },
-  Gibraltar: {
-    vieName: 'Gibraltar'
+    vieName: 'Gha-na'
   },
   Greece: {
     vieName: 'Hy Lạp'
   },
-  Greenland: {
-    vieName: 'Greenland'
-  },
   Grenada: {
-    vieName: 'Grenada; Grê-na-đa'
-  },
-  Guadeloupe: {
-    vieName: 'Guadeloupe'
-  },
-  Guam: {
-    vieName: 'Guam'
+    vieName: 'Grê-na-đa'
   },
   Guatemala: {
-    vieName: 'Guatemala; Goa-tê-ma-la'
-  },
-  Guernsey: {
-    vieName: 'Guernsey'
+    vieName: 'Goa-tê-ma-la'
   },
   Guinea: {
-    vieName: 'Guinea; Ghi-nê'
+    vieName: 'Ghi-nê'
   },
   'Guinea-Bissau': {
-    vieName: 'Guinea-Bissau; Ghi-nê Bít-xao'
+    vieName: 'Ghi-nê Bít-xao'
   },
   Guyana: {
-    vieName: 'Guyana; Guy-a-na'
+    vieName: 'Guy-a-na'
   },
   Haiti: {
-    vieName: 'Haiti; Ha-i-ti'
+    vieName: 'Ha-i-ti'
   },
   'Heard Island and McDonald Islands': {
     vieName: 'Heard Island and McDonald Islands'
   },
   Honduras: {
-    vieName: 'Honduras; Hôn-đu-rát'
+    vieName: 'Hôn-đu-rát'
   },
   'Hong Kong': {
     vieName: 'Hong Kong'
   },
   Hungary: {
-    vieName: 'Hungary; Hung-ga-ri'
+    vieName: 'Hung-ga-ri'
   },
   Iceland: {
-    vieName: 'Iceland; Ai-xơ-len'
+    vieName: 'Ai-xơ-len'
   },
   India: {
     vieName: 'Ấn Độ'
   },
   Indonesia: {
-    vieName: 'Indonesia; In-đô-nê-si-a'
+    vieName: 'In-đô-nê-si-a'
   },
   Iran: {
     vieName: 'Iran'
   },
   Iraq: {
-    vieName: 'Iraq; I-rắc'
+    vieName: 'I-rắc'
   },
   Ireland: {
-    vieName: 'Ireland; Ai-len'
+    vieName: 'Ai-len'
   },
   'Isle of Man': {
     vieName: 'Isle of Man'
   },
   Israel: {
-    vieName: 'Israel; I-xra-en'
+    vieName: 'I-xra-en'
   },
   Italy: {
-    vieName: 'Italy; Italia; Ý'
+    vieName: 'Ý'
   },
   'Ivory Coast': {
     vieName: 'Ivory Coast'
   },
   Jamaica: {
-    vieName: 'Jamaica; Gia-mai-ca'
+    vieName: 'Gia-mai-ca'
   },
   Japan: {
     vieName: 'Nhật Bản; Nhật'
@@ -349,73 +256,73 @@ const moreInfos = {
     vieName: 'Jersey'
   },
   Jordan: {
-    vieName: 'Jordan; Gioóc-đa-ni'
+    vieName: 'Gioóc-đa-ni'
   },
   Kazakhstan: {
-    vieName: 'Kazakhstan; Ca-dắc-xtan'
+    vieName: 'Ca-dắc-xtan'
   },
   Kenya: {
-    vieName: 'Kenya; Kê-ni-a'
+    vieName: 'Kê-ni-a'
   },
   Kiribati: {
-    vieName: 'Kiribati; Ki-ri-ba-ti'
+    vieName: 'Ki-ri-ba-ti'
   },
   Kosovo: {
     vieName: 'Kosovo'
   },
   Kuwait: {
-    vieName: 'Kuwait; Cô-oét'
+    vieName: 'Cô-oét'
   },
   Kyrgyzstan: {
-    vieName: 'Kyrgyzstan; Cư-rơ-gư-dơ-xtan'
+    vieName: 'Cư-rơ-gư-dơ-xtan'
   },
   Laos: {
-    vieName: 'Laos'
+    vieName: 'Lào'
   },
   Latvia: {
-    vieName: 'Latvia; Lát-vi-a'
+    vieName: 'Lát-vi-a'
   },
   Lebanon: {
-    vieName: 'Liban; Lebanon; Li Băng'
+    vieName: 'Li Băng'
   },
   Lesotho: {
-    vieName: 'Lesotho; Lê-xô-thô'
+    vieName: 'Lê-xô-thô'
   },
   Liberia: {
-    vieName: 'Liberia; Li-bê-ri-a'
+    vieName: 'Li-bê-ri-a'
   },
   Libya: {
-    vieName: 'Libya; Libi'
+    vieName: 'Libi'
   },
   Liechtenstein: {
-    vieName: 'Liechtenstein; Lít-ten-xơ-tên; Lích-tên- xtanh; Lích-then-xtai-in'
+    vieName: 'Lít-ten-xơ-tên; Lích-tên- xtanh; Lích-then-xtai-in'
   },
   Lithuania: {
     vieName: 'Litva'
   },
   Luxembourg: {
-    vieName: 'Luxembourg; Lúc-xăm-bua'
+    vieName: 'Lúc-xăm-bua'
   },
   Macau: {
     vieName: 'Macau'
   },
   Madagascar: {
-    vieName: 'Madagascar; Ma-đa-gát-xca'
+    vieName: 'Ma-đa-gát-xca'
   },
   Malawi: {
-    vieName: 'Malawi; Ma-la-uy'
+    vieName: 'Ma-la-uy'
   },
   Malaysia: {
-    vieName: 'Malaysia; Ma-lai-xi-a; Mã Lai'
+    vieName: 'Ma-lai-xi-a; Mã Lai'
   },
   Maldives: {
-    vieName: 'Maldives; Man-đi-vơ'
+    vieName: 'Man-đi-vơ'
   },
   Mali: {
-    vieName: 'Mali; Ma-li'
+    vieName: 'Ma-li'
   },
   Malta: {
-    vieName: 'Malta; Man-ta'
+    vieName: 'Man-ta'
   },
   'Marshall Islands': {
     vieName: 'Quần đảo Marshall; Quần đảo Mác-san'
@@ -424,16 +331,16 @@ const moreInfos = {
     vieName: 'Martinique'
   },
   Mauritania: {
-    vieName: 'Mauritania; Mô-ri-ta-ni'
+    vieName: 'Mô-ri-ta-ni'
   },
   Mauritius: {
-    vieName: 'Mauritius; Mô-ri-xơ'
+    vieName: 'Mô-ri-xơ'
   },
   Mayotte: {
     vieName: 'Mayotte'
   },
   Mexico: {
-    vieName: 'Mexico; Mễ Tây Cơ; Mê-hi-cô'
+    vieName: 'Mễ Tây Cơ; Mê-hi-cô'
   },
   Micronesia: {
     vieName: 'Micronesia'
@@ -442,34 +349,34 @@ const moreInfos = {
     vieName: 'Moldova'
   },
   Monaco: {
-    vieName: 'Monaco; Mô-na-cô'
+    vieName: 'Mô-na-cô'
   },
   Mongolia: {
     vieName: 'Mông Cổ'
   },
   Montenegro: {
-    vieName: 'Montenegro; Môn-tê-nê-grô'
+    vieName: 'Môn-tê-nê-grô'
   },
   Montserrat: {
     vieName: 'Montserrat'
   },
   Morocco: {
-    vieName: 'Morocco; Maroc; Ma-rốc'
+    vieName: 'Ma-rốc'
   },
   Mozambique: {
-    vieName: 'Mozambique; Mô-dăm-bích'
+    vieName: 'Mô-dăm-bích'
   },
   Myanmar: {
-    vieName: 'Myanmar; Myanma; Mi-an-ma'
+    vieName: 'Mi-an-ma'
   },
   Namibia: {
-    vieName: 'Namibia; Nam-mi-bi-a'
+    vieName: 'Nam-mi-bi-a'
   },
   Nauru: {
-    vieName: 'Nauru; Nau-ru'
+    vieName: 'Nau-ru'
   },
   Nepal: {
-    vieName: 'Nepal; Nê-pan'
+    vieName: 'Nê-pan'
   },
   Netherlands: {
     vieName: 'Hà Lan'
@@ -481,13 +388,13 @@ const moreInfos = {
     vieName: 'New Zealand; Niu Di-lân'
   },
   Nicaragua: {
-    vieName: 'Nicaragua; Ni-ca-ra-goa'
+    vieName: 'Ni-ca-ra-goa'
   },
   Niger: {
-    vieName: 'Niger; Ni-giê'
+    vieName: 'Ni-giê'
   },
   Nigeria: {
-    vieName: 'Nigeria; Ni-giê-ri-a'
+    vieName: 'Ni-giê-ri-a'
   },
   Niue: {
     vieName: 'Niue'
@@ -505,16 +412,16 @@ const moreInfos = {
     vieName: 'Northern Mariana Islands'
   },
   Norway: {
-    vieName: 'Nauy; Na Uy'
+    vieName: 'Na Uy'
   },
   Oman: {
-    vieName: 'Oman; Ô-man'
+    vieName: 'Ô-man'
   },
   Pakistan: {
-    vieName: 'Pakistan; Pa-ki-xtan'
+    vieName: 'Pa-ki-xtan'
   },
   Palau: {
-    vieName: 'Palau; Pa-lau; Pa-lao'
+    vieName: 'Pa-lau; Pa-lao'
   },
   Palestine: {
     vieName: 'Palestine'
@@ -526,13 +433,13 @@ const moreInfos = {
     vieName: 'Papua New Guinea; Pa-pua Niu Ghi-nê'
   },
   Paraguay: {
-    vieName: 'Paraguay; Pa-ra-goay'
+    vieName: 'Pa-ra-goay'
   },
   Peru: {
-    vieName: 'Peru; Pê-ru'
+    vieName: 'Pê-ru'
   },
   Philippines: {
-    vieName: 'Philippines; Phi-líp-pin'
+    vieName: 'Phi-líp-pin'
   },
   'Pitcairn Islands': {
     vieName: 'Pitcairn Islands'
@@ -547,7 +454,7 @@ const moreInfos = {
     vieName: 'Puerto Rico'
   },
   Qatar: {
-    vieName: 'Qatar; Ca-ta'
+    vieName: 'Ca-ta'
   },
   'Republic of the Congo': {
     vieName: 'Cộng hòa Congo; Công-gô; Cộng hòa Công-gô'
@@ -556,13 +463,13 @@ const moreInfos = {
     vieName: 'Réunion'
   },
   Romania: {
-    vieName: 'Romania; Ru-ma-ni'
+    vieName: 'Ru-ma-ni'
   },
   Russia: {
     vieName: 'Russia'
   },
   Rwanda: {
-    vieName: 'Rwanda; Ru-an-đa'
+    vieName: 'Ru-an-đa'
   },
   'Saint Barthélemy': {
     vieName: 'Saint Barthélemy'
@@ -586,7 +493,7 @@ const moreInfos = {
     vieName: 'Saint Vincent và Grenadines'
   },
   Samoa: {
-    vieName: 'Samoa; Xa-moa'
+    vieName: 'Xa-moa'
   },
   'San Marino': {
     vieName: 'San Marino; Xan Ma-ri-nô'
@@ -598,34 +505,34 @@ const moreInfos = {
     vieName: 'Ả Rập Xê Út'
   },
   Senegal: {
-    vieName: 'Senegal; Xê-nê-gan'
+    vieName: 'Xê-nê-gan'
   },
   Serbia: {
-    vieName: 'Serbia; Xéc-bi'
+    vieName: 'Xéc-bi'
   },
   Seychelles: {
-    vieName: 'Seychelles; Xây-sen'
+    vieName: 'Xây-sen'
   },
   'Sierra Leone': {
     vieName: 'Sierra Leone; Xi-ê-ra Lê-ôn'
   },
   Singapore: {
-    vieName: 'Singapore; Xin-ga-po'
+    vieName: 'Xin-ga-po'
   },
   'Sint Maarten': {
     vieName: 'Sint Maarten'
   },
   Slovakia: {
-    vieName: 'Slovakia; Xlô-va-kia'
+    vieName: 'Xlô-va-kia'
   },
   Slovenia: {
-    vieName: 'Slovenia; Xlô-vê-nia'
+    vieName: 'Xlô-vê-nia'
   },
   'Solomon Islands': {
     vieName: 'Quần đảo Sô-lô-môn'
   },
   Somalia: {
-    vieName: 'Somalia; Xô-ma-li'
+    vieName: 'Xô-ma-li'
   },
   'South Africa': {
     vieName: 'Cộng hòa Nam Phi'
@@ -646,10 +553,10 @@ const moreInfos = {
     vieName: 'Sri Lanca; Xri Lan-ca'
   },
   Sudan: {
-    vieName: 'Sudan; Xu Đăng'
+    vieName: 'Xu Đăng'
   },
   Suriname: {
-    vieName: 'Surinam; Xu-ri-nam'
+    vieName: 'Xu-ri-nam'
   },
   'Svalbard and Jan Mayen': {
     vieName: 'Svalbard and Jan Mayen'
@@ -667,7 +574,7 @@ const moreInfos = {
     vieName: 'Taiwan'
   },
   Tajikistan: {
-    vieName: 'Tajikistan; Ta-di-ki-xtan'
+    vieName: 'Ta-di-ki-xtan'
   },
   Tanzania: {
     vieName: 'Tanzania'
@@ -679,37 +586,37 @@ const moreInfos = {
     vieName: 'Đông Ti-mo'
   },
   Togo: {
-    vieName: 'Togo; Tô-gô'
+    vieName: 'Tô-gô'
   },
   Tokelau: {
     vieName: 'Tokelau'
   },
   Tonga: {
-    vieName: 'Tonga; Tôn-ga'
+    vieName: 'Tôn-ga'
   },
   'Trinidad and Tobago': {
     vieName: 'Trinidad và Tobago'
   },
   Tunisia: {
-    vieName: 'Tunisia; Tuy-ni-di'
+    vieName: 'Tuy-ni-di'
   },
   Turkey: {
     vieName: 'Thổ Nhĩ Kỳ'
   },
   Turkmenistan: {
-    vieName: 'Turkmenistan; Tuốc-mê-ni-xtan'
+    vieName: 'Tuốc-mê-ni-xtan'
   },
   'Turks and Caicos Islands': {
     vieName: 'Turks and Caicos Islands'
   },
   Tuvalu: {
-    vieName: 'Tuvalu; Tu-va-lu'
+    vieName: 'Tu-va-lu'
   },
   Uganda: {
-    vieName: 'Uganda; U-gan-đa'
+    vieName: 'U-gan-đa'
   },
   Ukraine: {
-    vieName: 'Ukraina; U-crai-na;Uycờrain'
+    vieName: 'U-crai-na;Uycờrain'
   },
   'United Arab Emirates': {
     vieName: 'Các Tiểu vương quốc Ả Rập Thống nhất'
@@ -727,13 +634,13 @@ const moreInfos = {
     vieName: 'United States Virgin Islands'
   },
   Uruguay: {
-    vieName: 'Uruguay; U-ru-guay'
+    vieName: 'U-ru-guay'
   },
   Uzbekistan: {
-    vieName: 'Uzbekistan; U-dơ-bê-ki-xtan'
+    vieName: 'U-dơ-bê-ki-xtan'
   },
   Vanuatu: {
-    vieName: 'Vanuatu; Va-nu-a-tu'
+    vieName: 'Va-nu-a-tu'
   },
   'Vatican City': {
     vieName: 'Vatican City'
@@ -751,20 +658,20 @@ const moreInfos = {
     vieName: 'Western Sahara'
   },
   Yemen: {
-    vieName: 'Yemen; Y-ê-men'
+    vieName: 'Y-ê-men'
   },
   Zambia: {
-    vieName: 'Zambia; Dăm-bi-a'
+    vieName: 'Dăm-bi-a'
   },
   Zimbabwe: {
-    vieName: 'Zimbabwe; Dim-ba-bu-ê'
+    vieName: 'Dim-ba-bu-ê'
   }
 }
 
+console.log('🔍 Collecting information of countries...')
 fetch('https://restcountries.com/v3.1/all')
   .then((res) => res.json())
   .then((data) => {
-    console.log('🔍 Collecting information of countries...')
     const countries = []
 
     data.forEach((c) => {

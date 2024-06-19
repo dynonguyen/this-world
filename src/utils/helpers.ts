@@ -3,4 +3,14 @@ export function getEnv(key: EnvKey) {
   return import.meta.env[key] || ''
 }
 
-export const withAssets = (path: string) => `${getEnv('VITE_BASE_URL')}/${path}`
+export function withAssets(path: string) {
+  return `${getEnv('VITE_BASE_URL')}/${path}`
+}
+
+export function safeJsonParse<T extends object>(raw: string): T {
+  try {
+    return JSON.parse(raw)
+  } catch (error) {
+    return {} as T
+  }
+}

@@ -1,13 +1,22 @@
 import { addDynamicIconSelectors } from '@iconify/tailwind'
 import daisyui from 'daisyui'
 import themes from 'daisyui/src/theming/themes'
+import plugin from 'tailwindcss/plugin'
 
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{js,ts,vue}'],
   theme: { extend: {} },
   darkMode: 'class',
-  plugins: [daisyui, addDynamicIconSelectors()],
+  plugins: [
+    daisyui,
+    addDynamicIconSelectors(),
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        '.flex-center': { display: 'flex', alignItems: 'center' }
+      })
+    })
+  ],
 
   daisyui: {
     styled: true,
@@ -31,7 +40,7 @@ export default {
         }
       }
     ],
-    darkTheme: 'light',
+    darkTheme: 'dark',
     utils: true,
     themeRoot: ':root',
     logs: false

@@ -2,6 +2,4 @@
 import { RouterView } from 'vue-router'
 </script>
 
-<template>
-  <RouterView />
-</template>
+<template>VITE_BASE_URL <RouterView /></template>

@@ -6,7 +6,6 @@ const { userLocation } = useUserLocationStore()
 </script>
 
 <template>
-  <button class="btn btn-primary">Button {{ userLocation.country }}</button>
   <ThemeController />
-  <div style="height: 200vh">HomePage</div>
+  {{ userLocation }}
 </template>

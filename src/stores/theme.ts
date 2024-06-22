@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { onMounted, readonly, ref } from 'vue'
-import { LS_KEY } from '~/constants/key'
+import { LS_KEY, STORE_KEY } from '~/constants/key'
 
 type Mode = 'light' | 'dark'
 
@@ -11,7 +11,7 @@ const changeAndPersistTheme = (mode: Mode) => {
   localStorage.setItem(LS_KEY.THEME, mode)
 }
 
-export const useThemeMode = defineStore('themeMode', () => {
+export const useThemeMode = defineStore(STORE_KEY.THEME, () => {
   const mode = ref<Mode>(localStorage.getItem(LS_KEY.THEME) === 'dark' ? 'dark' : 'light')
 
   onMounted(() => changeAndPersistTheme(mode.value))

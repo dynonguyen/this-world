@@ -1,3 +1,6 @@
 export const PATH = {
-  HOME: '/home'
+  HOME: '/discovery',
+  DISCOVERY: '/discovery',
+  GAME: '/game',
+  MAP: '/map'
 }

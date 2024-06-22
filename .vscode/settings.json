@@ -11,5 +11,6 @@
     "**/factbooks/*.html": true
   },
   "typescript.tsserver.experimental.useVsCodeWatcher": false,
-  "iconify.prefixes": ["", "i-"]
+  "iconify.prefixes": ["", "i-"],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

@@ -1,3 +1,3 @@
 <script setup lang="ts"></script>
 
-<template>NotFound</template>
+<template>Discovery</template>

@@ -1,6 +1,8 @@
 export const STORE_KEY = {
   COUNTRIES: 'countries',
-  USER_INFO: 'user-info'
+  USER_LOCATION: 'user-location',
+  IS_MOBILE: 'is-mobile',
+  THEME: 'theme'
 }
 
 export const LS_KEY = {

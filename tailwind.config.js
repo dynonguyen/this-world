@@ -1,4 +1,5 @@
 import phIcons from '@iconify-json/ph/icons.json'
+import uilIcons from '@iconify-json/uil/icons.json'
 import { addIconSelectors } from '@iconify/tailwind'
 import daisyui from 'daisyui'
 import themes from 'daisyui/src/theming/themes'
@@ -11,16 +12,18 @@ export default {
 
   theme: {
     extend: {
-      colors: {
-        'neutral-divider': 'rgb(var(--neutral-divider) / <alpha-value>)'
-      }
+      colors: { 'neutral-divider': 'rgb(var(--neutral-divider) / <alpha-value>)' },
+      screens: { sm: '576px' }
     }
   },
 
   plugins: [
     daisyui,
     addIconSelectors({
-      prefixes: [{ prefix: 'ph', source: phIcons }],
+      prefixes: [
+        { prefix: 'ph', source: phIcons },
+        { prefix: 'uil', source: uilIcons }
+      ],
       maskSelector: '.icon',
       iconSelector: '.{prefix}-{name}'
     }),

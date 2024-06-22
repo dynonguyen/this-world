@@ -34,6 +34,7 @@
     "@vue/tsconfig": "^0.5.1",
     "autoprefixer": "^10.4.19",
     "cheerio": "^1.0.0-rc.12",
+    "clsx": "^2.1.1",
     "cssnano": "^7.0.3",
     "cz-customizable": "^7.0.0",
     "daisyui": "^4.12.2",

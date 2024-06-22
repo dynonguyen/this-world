@@ -3,6 +3,6 @@
 <template>
   <div className="input input-sm input-bordered flex-v-center gap-2 w-full">
     <span class="icon uil-search"></span>
-    <input type="text" className="grow" placeholder="Search" />
+    <input type="text" className="grow" placeholder="Search a country" />
   </div>
 </template>

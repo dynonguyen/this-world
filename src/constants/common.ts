@@ -12,3 +12,8 @@ export const NAVIGATION = [
   { label: 'Map', to: PATH.MAP, icon: 'ph-map-trifold', activeIcon: 'ph-map-trifold-fill' },
   { label: 'Game', to: PATH.GAME, icon: 'ph-game-controller', activeIcon: 'ph-game-controller-fill' }
 ]
+
+export enum SortOrder {
+  ASC = 'asc',
+  DESC = 'desc'
+}

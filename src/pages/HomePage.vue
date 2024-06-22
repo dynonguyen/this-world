@@ -1,11 +1,5 @@
-<script setup lang="ts">
-import ThemeController from '~/components/ThemeController.vue'
-import { useUserLocationStore } from '~/stores/user-location'
-
-const { userLocation } = useUserLocationStore()
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <ThemeController />
-  {{ userLocation }}
+  <div class="h-[200vh]">Home page</div>
 </template>

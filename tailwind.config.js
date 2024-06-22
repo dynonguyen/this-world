@@ -1,4 +1,5 @@
-import { addDynamicIconSelectors } from '@iconify/tailwind'
+import phIcons from '@iconify-json/ph/icons.json'
+import { addIconSelectors } from '@iconify/tailwind'
 import daisyui from 'daisyui'
 import themes from 'daisyui/src/theming/themes'
 import plugin from 'tailwindcss/plugin'
@@ -6,14 +7,29 @@ import plugin from 'tailwindcss/plugin'
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{js,ts,vue}'],
-  theme: { extend: {} },
   darkMode: 'class',
+
+  theme: {
+    extend: {
+      colors: {
+        'neutral-divider': 'rgb(var(--neutral-divider) / <alpha-value>)'
+      }
+    }
+  },
+
   plugins: [
     daisyui,
-    addDynamicIconSelectors(),
+    addIconSelectors({
+      prefixes: [{ prefix: 'ph', source: phIcons }],
+      maskSelector: '.icon',
+      iconSelector: '.{prefix}-{name}'
+    }),
     plugin(function ({ addUtilities }) {
       addUtilities({
-        '.flex-center': { display: 'flex', alignItems: 'center' }
+        '.flex-v-center': { display: 'flex', alignItems: 'center' },
+        '.flex-center': { display: 'flex', alignItems: 'center', justifyContent: 'center' },
+        '.base-border': { '@apply border border-neutral-divider border-solid': {} },
+        '.base-border-bottom': { '@apply border-b border-neutral-divider border-solid': {} }
       })
     })
   ],
@@ -24,7 +40,8 @@ export default {
       {
         light: {
           ...themes.winter,
-          primary: '#ec60ce'
+          primary: '#ec60ce',
+          '--neutral-divider': '229 231 235' // gray.200
         }
       },
       {
@@ -36,13 +53,15 @@ export default {
           'base-100': '#2A303C',
           'base-200': '#242933',
           'base-300': '#20252E',
-          'base-content': '#B2CCD6'
+          'base-content': '#B2CCD6',
+
+          '--neutral-divider': '75 85 99' // gray.600
         }
       }
     ],
     darkTheme: 'dark',
-    utils: true,
     themeRoot: ':root',
+    utils: true,
     logs: false
   }
 }

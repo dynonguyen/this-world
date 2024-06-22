@@ -12,6 +12,7 @@ const routes: Readonly<RouteRecordRaw[]> = [
     path: '',
     component: MainLayout,
     children: [
+      { path: '', redirect: PATH.HOME },
       { path: PATH.DISCOVERY, name: 'Discovery', component: DiscoveryPage },
       { path: PATH.MAP, name: 'Map', component: ComingSoonPage },
       { path: PATH.GAME, name: 'Game', component: ComingSoonPage },

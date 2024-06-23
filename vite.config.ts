@@ -5,7 +5,7 @@ import path from 'path'
 import { defineConfig } from 'vite'
 import { ViteEjsPlugin } from 'vite-plugin-ejs'
 
-const BASE_URL = process.env.BASE_URL || ''
+const BASE_URL = process.env.VITE_BASE_URL || ''
 
 const injectData = {
   baseUrl: BASE_URL,

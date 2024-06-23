@@ -1,11 +1,9 @@
 <script setup lang="ts">
-import ThemeController from '~/components/ThemeController.vue'
-import { useUserLocationStore } from '~/stores/user-location'
-
-const { userLocation } = useUserLocationStore()
+import PageTitle from '~/components/PageTitle.vue'
+import StatisticOverview from '~/features/overview/components/StatisticOverview.vue'
 </script>
 
 <template>
-  <ThemeController />
-  {{ userLocation }}
+  <PageTitle>Overview</PageTitle>
+  <StatisticOverview />
 </template>

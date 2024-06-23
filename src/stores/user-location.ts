@@ -15,19 +15,19 @@ const getUserLocation = async () => {
 
   if (lsLocation && lsLocation.countryCode) return lsLocation
 
-  const [_, response = {}] = await to(fetch('http://ip-api.com/json').then((res) => res.json()))
+  const [_, response = {}] = await to(fetch('http://ip-api.com/json').then(res => res.json()))
 
   localStorage.setItem(LS_KEY.LOCATION, JSON.stringify(response))
 
   return response as UserLocation
 }
 
-export const useUserLocationStore = defineStore(STORE_KEY.USER_INFO, () => {
+export const useUserLocationStore = defineStore(STORE_KEY.USER_LOCATION, () => {
   const userLocation = ref<UserLocation>({ country: 'Viet Nam', countryCode: 'VN', isVie: true })
 
-  getUserLocation().then((lo) => {
+  getUserLocation().then(lo => {
     userLocation.value = { ...lo, isVie: lo.countryCode === 'VN' }
   })
 
-  return readonly({ userLocation })
+  return { userLocation: readonly(userLocation) }
 })

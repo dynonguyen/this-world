@@ -1,5 +1,12 @@
+<div align="center">
+
+<img src="./public/img/logo.png" width="72px" />
+<br />
+
 # This World
 
-> The website helps consolidate knowledge about countries around the world. Data is compiled in June 2024.
+The website helps consolidate knowledge about countries around the world. The data was last updated in 2024.
 
-![Logo](./public/img/logo.png)
+[https://thisworld.vercel.app](https://thisworld.vercel.app/)
+
+</div>

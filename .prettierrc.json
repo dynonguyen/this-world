@@ -7,6 +7,6 @@
   "trailingComma": "none",
   "tabWidth": 2,
   "useTabs": false,
-  "arrowParens": "always",
+  "arrowParens": "avoid",
   "jsxBracketSameLine": false
 }

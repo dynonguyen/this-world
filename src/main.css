@@ -7,3 +7,9 @@
     font-family: 'Inter', sans-serif;
   }
 }
+
+@layer utilities {
+  .dropdown-content a[data-active='true'] {
+    @apply !text-neutral-content !bg-neutral;
+  }
+}

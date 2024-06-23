@@ -18,20 +18,20 @@ export const useCountriesStore = defineStore(STORE_KEY.COUNTRIES, () => {
   const countryByCode = reactive<CountryMap>({})
   const groupedByContinent = reactive<Record<string, string[]>>({})
 
-  fetchCountries().then((data) => {
-    initialized.value = true
-
-    data.forEach((country) => {
+  fetchCountries().then(data => {
+    data.forEach(country => {
       countries.push(country)
       countryByCode[country.code] = country
 
-      country.continents.forEach((continent) => {
+      country.continents.forEach(continent => {
         !groupedByContinent[continent]
           ? (groupedByContinent[continent] = [country.code])
           : groupedByContinent[continent].push(country.code)
       })
     })
+
+    initialized.value = true
   })
 
-  return readonly({ initialized, countries, countryByCode, groupedByContinent })
+  return { initialized: readonly(initialized), ...readonly({ countries, countryByCode, groupedByContinent }) }
 })

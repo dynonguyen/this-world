@@ -5,10 +5,21 @@ import daisyui from 'daisyui'
 import themes from 'daisyui/src/theming/themes'
 import plugin from 'tailwindcss/plugin'
 
+const safelist = (() => {
+  const s = new Set()
+
+  ;['primary', 'orange-500'].forEach(c => {
+    ;[`bg-${c}/15`, `border-${c}/25`, `border-${c}/50`, `text-${c}`].forEach(c => s.add(c))
+  })
+
+  return Array.from(s)
+})()
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{js,ts,vue}'],
   darkMode: 'class',
+  safelist,
 
   theme: {
     extend: {
@@ -44,6 +55,7 @@ export default {
         light: {
           ...themes.winter,
           primary: '#ec60ce',
+          'neutral-content': '#737373',
           '--neutral-divider': '229 231 235' // gray.200
         }
       },
@@ -52,7 +64,7 @@ export default {
           ...themes.dark,
           primary: '#e86fbd',
           neutral: '#1c212b',
-          'neutral-content': '#B2CCD6',
+          'neutral-content': '#d4d4d4',
           'base-100': '#2A303C',
           'base-200': '#242933',
           'base-300': '#20252E',

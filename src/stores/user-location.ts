@@ -29,5 +29,5 @@ export const useUserLocationStore = defineStore(STORE_KEY.USER_LOCATION, () => {
     userLocation.value = { ...lo, isVie: lo.countryCode === 'VN' }
   })
 
-  return readonly({ userLocation })
+  return { userLocation: readonly(userLocation) }
 })

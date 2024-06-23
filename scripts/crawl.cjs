@@ -571,7 +571,7 @@ const moreInfos = {
     vieName: 'Syria'
   },
   Taiwan: {
-    vieName: 'Taiwan'
+    vieName: 'Đài Loan'
   },
   Tajikistan: {
     vieName: 'Ta-di-ki-xtan'
@@ -670,11 +670,11 @@ const moreInfos = {
 
 console.log('🔍 Collecting information of countries...')
 fetch('https://restcountries.com/v3.1/all')
-  .then((res) => res.json())
-  .then((data) => {
+  .then(res => res.json())
+  .then(data => {
     const countries = []
 
-    data.forEach((c) => {
+    data.forEach(c => {
       const { vieName = c.name.common, ...more } = moreInfos[c.name.common] || {}
 
       const country = {
@@ -721,7 +721,7 @@ fetch('https://restcountries.com/v3.1/all')
     fs.writeFile(
       path.resolve(__dirname, '../public/data/countries.json'),
       JSON.stringify(countries, null, 2),
-      (error) => {
+      error => {
         error ? console.error('Write file error: ', error) : console.log('✅ Collect success information of countries')
       }
     )

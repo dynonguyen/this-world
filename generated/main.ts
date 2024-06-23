@@ -4,6 +4,7 @@ import path from 'path'
 import { z } from 'zod'
 import { Continent, Country } from '../src/types/Country'
 import { countries } from './raw'
+import { fifaMenWorldCup } from './worldcup'
 
 const stringRequired = z.string().trim().min(1)
 const stringOptional = z.string().trim().default('')
@@ -32,26 +33,19 @@ const validationSchema = z.object({
   flag: stringRequired,
   flagSymbol: stringRequired,
   googleMap: stringRequired,
-  idd: z.object({
-    root: stringRequired,
-    suffixes: z.array(stringRequired)
-  }),
+  dialingCode: stringOptional,
   independent: z.boolean(),
-  languages: z
-    .array(
-      z.object({
-        code: stringRequired,
-        name: stringRequired
-      })
-    )
-    .min(1),
+  languages: z.array(stringRequired).min(1),
   latlng: z.tuple([z.number(), z.number()]),
   name: z.object({
     common: stringRequired,
     official: stringRequired,
     vieName: stringRequired
   }),
-  population: z.number(),
+  population: z.object({
+    updatedAt: stringOptional,
+    total: z.number()
+  }),
   region: stringRequired,
   startOfWeek: z.union([z.literal('monday'), z.literal('sunday'), z.literal('saturday')]),
   subregion: stringOptional,
@@ -59,7 +53,15 @@ const validationSchema = z.object({
   tld: z.array(stringRequired),
   unMember: z.boolean(),
   unObserver: z.boolean(),
-  wiki: stringRequired
+  wiki: stringOptional,
+  fifaMenWorldCup: z
+    .array(
+      z.object({
+        year: z.number(),
+        place: z.union([z.literal('champion'), z.literal('runner-up'), z.literal('third')])
+      })
+    )
+    .optional()
 })
 
 const validateCountries = async () => {
@@ -95,7 +97,7 @@ function generateCountriesFile(data: any) {
   })
 }
 
-async function validateAndRewrite() {
+async function validateAndRewrite(write = true) {
   const [errorCountries, validCountries] = await validateCountries()
 
   if (errorCountries.length) {
@@ -103,10 +105,27 @@ async function validateAndRewrite() {
     console.log(firstError[0])
     console.log(firstError[1])
   } else {
-    generateCountriesFile(validCountries)
+    write && generateCountriesFile(validCountries)
   }
 }
 
 function editData() {
-  generateCountriesFile([])
+  const data = countries.map(c => {
+    const worldCup = fifaMenWorldCup
+      .filter(wc => wc[c.name.common] || wc[c.name.official])
+      .map(wc => ({
+        year: wc.year,
+        place: wc[c.name.common] || wc[c.name.official]
+      }))
+
+    return {
+      ...c,
+      ...(worldCup.length > 0 && { fifaMenWorldCup: worldCup })
+    }
+  })
+
+  generateCountriesFile(data)
 }
+
+validateAndRewrite()
+// editData()

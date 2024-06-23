@@ -5,7 +5,7 @@
 
 # This World
 
-The website helps consolidate knowledge about countries around the world. The data was last updated in 2024.
+The website helps consolidate knowledge about countries around the world. The data was last updated in June 2024.
 
 [https://thisworld.vercel.app](https://thisworld.vercel.app/)
 

@@ -10,19 +10,19 @@ export type CountryCurrency = {
   symbol: string
 }
 
-export type CountryIDD = {
-  root: string
-  suffixes: string[]
-}
-
 export type CountryCar = {
   signs: string[]
   side: 'left' | 'right'
 }
 
-export type CountryLanguage = {
-  code: string
-  name: string
+export type CountryPopulation = {
+  updatedAt: string
+  total: number
+}
+
+export type CountryFifaMenWorldCup = {
+  year: number
+  place: 'champion' | 'runner-up' | 'third'
 }
 
 export enum Continent {
@@ -51,12 +51,12 @@ export type Country = {
   flag: string
   flagSymbol: string
   googleMap: string
-  idd: CountryIDD // International direct dialing - aka: calling code
+  dialingCode: string // aka: calling code
   independent: boolean // If true, it's a country otherwise it's a territory (or disputed)
-  languages: CountryLanguage[]
+  languages: string[]
   latlng: [number, number] // Latitude and longitude
   name: CountryName
-  population: number
+  population: CountryPopulation
   region: string
   startOfWeek: 'monday' | 'sunday' | 'saturday'
   subregion: string
@@ -65,6 +65,7 @@ export type Country = {
   unMember: boolean // United Nations member status
   unObserver: boolean // United Nations observer status
   wiki: string
+  fifaMenWorldCup?: CountryFifaMenWorldCup[]
 }
 
 export type CountryMap = Record<string, Country>

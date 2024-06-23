@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import fs from 'fs'
 import path from 'path'
 import { z } from 'zod'
@@ -94,7 +95,7 @@ function generateCountriesFile(data: any) {
   })
 }
 
-async function _main() {
+async function validateAndRewrite() {
   const [errorCountries, validCountries] = await validateCountries()
 
   if (errorCountries.length) {
@@ -106,4 +107,6 @@ async function _main() {
   }
 }
 
-// main()
+function editData() {
+  generateCountriesFile([])
+}

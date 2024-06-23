@@ -2,7 +2,6 @@ export type CountryName = {
   common: string
   official: string
   vieName: string
-  nativeName: Record<string, { official: string; common: string }>
 }
 
 export type CountryCurrency = {
@@ -30,8 +29,8 @@ export enum Continent {
   Asia = 'Asia',
   Europe = 'Europe',
   Africa = 'Africa',
-  NorthAmerica = 'North Americas',
-  SouthAmerica = 'South Americas',
+  NorthAmerica = 'North America',
+  SouthAmerica = 'South America',
   Oceania = 'Oceania',
   Antarctica = 'Antarctica'
 }
@@ -53,7 +52,7 @@ export type Country = {
   flagSymbol: string
   googleMap: string
   idd: CountryIDD // International direct dialing - aka: calling code
-  independent: boolean
+  independent: boolean // If true, it's a country otherwise it's a territory (or disputed)
   languages: CountryLanguage[]
   latlng: [number, number] // Latitude and longitude
   name: CountryName
@@ -64,6 +63,7 @@ export type Country = {
   timezones: string[]
   tld: string[] // Top level domain
   unMember: boolean // United Nations member status
+  unObserver: boolean // United Nations observer status
   wiki: string
 }
 

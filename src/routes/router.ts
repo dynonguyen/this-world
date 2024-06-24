@@ -13,12 +13,12 @@ const routes: Readonly<RouteRecordRaw[]> = [
     path: '',
     component: MainLayout,
     children: [
-      { path: PATH.HOME, name: 'Overview', component: HomePage },
+      { path: PATH.OVERVIEW, name: 'Overview', component: HomePage },
       { path: PATH.DISCOVERY, name: 'Discovery', component: DiscoveryPage },
       { path: PATH.MAP, name: 'Map', component: ComingSoonPage },
       { path: PATH.GAME, name: 'Game', component: ComingSoonPage },
-      { path: '', redirect: PATH.HOME },
-      { path: '/:p*', redirect: PATH.HOME }
+      { path: '', redirect: PATH.OVERVIEW },
+      { path: '/:p*', redirect: PATH.OVERVIEW }
     ]
   }
 ]

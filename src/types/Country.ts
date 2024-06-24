@@ -35,6 +35,14 @@ export enum Continent {
   Antarctica = 'Antarctica'
 }
 
+export enum Ocean {
+  Atlantic = 'Atlantic',
+  Pacific = 'Pacific',
+  Indian = 'Indian',
+  Southern = 'Southern',
+  Arctic = 'Arctic'
+}
+
 export type Country = {
   area: number // Geographical size by km2
   borders: string[] // Border countries

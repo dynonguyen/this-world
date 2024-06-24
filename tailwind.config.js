@@ -4,22 +4,12 @@ import { addIconSelectors } from '@iconify/tailwind'
 import daisyui from 'daisyui'
 import themes from 'daisyui/src/theming/themes'
 import plugin from 'tailwindcss/plugin'
-
-const safelist = (() => {
-  const s = new Set()
-
-  ;['primary', 'orange-500'].forEach(c => {
-    ;[`bg-${c}/15`, `border-${c}/25`, `border-${c}/50`, `text-${c}`].forEach(c => s.add(c))
-  })
-
-  return Array.from(s)
-})()
+import additionalIcons from './icons.json'
 
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{js,ts,vue}'],
   darkMode: 'class',
-  safelist,
 
   theme: {
     extend: {
@@ -33,7 +23,8 @@ export default {
     addIconSelectors({
       prefixes: [
         { prefix: 'ph', source: phIcons },
-        { prefix: 'uil', source: uilIcons }
+        { prefix: 'uil', source: uilIcons },
+        { prefix: 'other', source: additionalIcons }
       ],
       maskSelector: '.icon',
       iconSelector: '.{prefix}-{name}'
@@ -54,8 +45,8 @@ export default {
       {
         light: {
           ...themes.winter,
+          error: '#FF5962',
           primary: '#ec60ce',
-          'neutral-content': '#737373',
           '--neutral-divider': '229 231 235' // gray.200
         }
       },

@@ -17,7 +17,7 @@ const actionId = uniqueId('dropdown')
 
     <ul
       v-outside-click:[actionId]="() => (open = false)"
-      class="dropdown-content z-[1] menu p-2 shadow-lg bg-base-100 rounded-box gap-0.5"
+      class="dropdown-content z-[1] menu p-2 shadow-lg bg-base-100 rounded-box gap-1"
       v-bind="menuProps"
     >
       <slot name="list"></slot>

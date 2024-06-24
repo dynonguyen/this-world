@@ -4,7 +4,6 @@ export enum ViewType {
   Gallery = 'gallery',
   Table = 'table'
 }
-export const VIEW_AS_PARAM_KEY = 'v'
 export const DEFAULT_VIEW_AS = ViewType.Gallery
 </script>
 
@@ -12,43 +11,42 @@ export const DEFAULT_VIEW_AS = ViewType.Gallery
 import { computed, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import Dropdown from '~/components/Dropdown.vue'
+import { FILTER_QUERY_KEY } from '~/constants/key'
 import FilterButton from './FilterButton.vue'
+import FilterItem from './FilterItem.vue'
 
 const open = ref(false)
 const route = useRoute()
 const router = useRouter()
 
 type ViewItem = { type: ViewType; icon: string; label: string; active?: boolean }
-const viewAs = computed<{ current: ViewItem; views: ViewItem[] }>(() => {
+const view = computed<{ items: ViewItem[]; current: ViewItem }>(() => {
   const query = route.query
-  const filtered = query[VIEW_AS_PARAM_KEY] || DEFAULT_VIEW_AS
+  const filtered = query[FILTER_QUERY_KEY.VIEW_AS] || DEFAULT_VIEW_AS
 
-  const views: ViewItem[] = [
+  const items: ViewItem[] = [
     { type: ViewType.Gallery, icon: 'uil-apps', label: 'Gallery' },
     { type: ViewType.List, icon: 'uil-list-ul', label: 'List' },
     { type: ViewType.Table, icon: 'ph-table', label: 'Table' }
   ].map(view => ({ ...view, active: view.type === filtered }))
 
-  return { current: views.find(view => view.active) || views[0], views }
+  return { current: items.find(view => view.active) || items[0], items }
 })
 
-const handleChangeView = (type: ViewType) => {
-  router.push({ query: { ...route.query, [VIEW_AS_PARAM_KEY]: type } })
+const handleViewChange = (type: ViewType) => {
+  router.push({ query: { ...route.query, [FILTER_QUERY_KEY.VIEW_AS]: type } })
   open.value = false
 }
 </script>
 
 <template>
-  <Dropdown v-model:open="open" class="dropdown-end" :menu-props="{ class: 'w-36' }">
+  <Dropdown v-model:open="open" :menu-props="{ class: 'w-44' }">
     <template #action>
-      <FilterButton :icon="viewAs.current.icon" :label="viewAs.current.label" tooltip="View as" @click="open = !open" />
+      <FilterButton :icon="view.current.icon" :label="view.current.label" tooltip="View as" @click="open = !open" />
     </template>
     <template #list>
-      <li v-for="view in viewAs.views" :key="view.type" @click="handleChangeView(view.type)">
-        <a class="flex-v-center gap-2" :data-active="view.active">
-          <span class="icon" :class="view.icon"></span>
-          <span>{{ view.label }}</span>
-        </a>
+      <li v-for="v in view.items" :key="v.type" @click="handleViewChange(v.type)">
+        <FilterItem v-bind="v" />
       </li>
     </template>
   </Dropdown>

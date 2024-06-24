@@ -3,14 +3,23 @@
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "material-icon-theme.activeIconPack": "vue",
-  "cSpell.words": ["cioc", "clsx", "daisyui", "Factbook", "fifa", "iconify", "latlng", "pinia", "tailwindcss"],
+  "cSpell.words": [
+    "cioc",
+    "clsx",
+    "daisyui",
+    "Factbook",
+    "fifa",
+    "iconify",
+    "latlng",
+    "pinia",
+    "tailwindcss",
+    "unitednations"
+  ],
   "search.exclude": {
     "**/node_modules": true,
     "**/bower_components": true,
     "**/*.code-search": true,
     "**/factbooks/*.html": true
   },
-  "typescript.tsserver.experimental.useVsCodeWatcher": false,
-  "iconify.prefixes": ["", "i-"],
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsserver.experimental.useVsCodeWatcher": false
 }

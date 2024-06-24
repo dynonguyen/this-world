@@ -185,13 +185,6 @@
   dependencies:
     "@iconify/types" "*"
 
-"@iconify-json/simple-icons@^1.1.107":
-  version "1.1.107"
-  resolved "https://registry.yarnpkg.com/@iconify-json/simple-icons/-/simple-icons-1.1.107.tgz#5858306422d814f95439e6baa8cee5c39ef33ee4"
-  integrity sha512-IEIekNX+KsA/xOjTCxgdSDe6OJ1rOpio5CJ8GgCiyFZYSkPG1FPTFJIYGT95qh+HvnLAHqtKqZT53vDfyNl8fQ==
-  dependencies:
-    "@iconify/types" "*"
-
 "@iconify-json/uil@^1.1.8":
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/@iconify-json/uil/-/uil-1.1.8.tgz#c5daee15bc07eb945f3d22e3f9e3eae1d34775d1"

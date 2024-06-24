@@ -28,8 +28,10 @@ const router = createRouter({
   routes
 })
 
-router.beforeEach((to, _, next) => {
-  document.title = to.name ? `This World | ${to.name as string}` : 'This World'
+router.beforeEach((to, from, next) => {
+  if (to.path !== from.path) {
+    document.title = to.name ? `This World | ${to.name as string}` : 'This World'
+  }
   next()
 })
 

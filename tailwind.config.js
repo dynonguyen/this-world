@@ -45,6 +45,7 @@ export default {
       {
         light: {
           ...themes.winter,
+          error: '#FF5962',
           primary: '#ec60ce',
           '--neutral-divider': '229 231 235' // gray.200
         }

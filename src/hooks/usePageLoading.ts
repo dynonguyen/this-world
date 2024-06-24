@@ -5,8 +5,8 @@ export const usePageLoading = () => {
   const isLoading = ref(false)
   const router = useRouter()
 
-  router.beforeEach((_, __, next) => {
-    isLoading.value = true
+  router.beforeEach((to, from, next) => {
+    if (to.path !== from.path) isLoading.value = true
     next()
   })
 

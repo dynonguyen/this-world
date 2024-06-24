@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import ActionButton from '~/components/ActionButton.vue'
-import SearchBar from '~/features/search/SearchBar.vue'
+import GlobalSearch from '~/features/search/GlobalSearch.vue'
 import { useIsMobile } from '~/stores/is-mobile'
 import AppLogo from './AppLogo.vue'
 import ThemeController from './ThemeController.vue'
@@ -16,7 +16,7 @@ const isMobileStore = useIsMobile()
         <AppLogo />
       </div>
       <div class="grow w-full md:max-w-80">
-        <SearchBar />
+        <GlobalSearch />
       </div>
     </div>
 

@@ -33,5 +33,10 @@ export const useCountriesStore = defineStore(STORE_KEY.COUNTRIES, () => {
     initialized.value = true
   })
 
-  return { initialized: readonly(initialized), ...readonly({ countries, countryByCode, groupedByContinent }) }
+  return {
+    initialized: readonly(initialized),
+    countries: readonly(countries),
+    countryByCode: readonly(countryByCode),
+    groupedByContinent: readonly(groupedByContinent)
+  }
 })

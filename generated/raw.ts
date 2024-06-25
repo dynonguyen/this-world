@@ -451,7 +451,7 @@ export const countries = [
     independent: true,
     languages: ['English'],
     latlng: [-27, 133],
-    name: { common: 'Australia', official: 'Commonwealth of Australia', vieName: 'Úc; Ô-xtrây-li-a' },
+    name: { common: 'Australia', official: 'Commonwealth of Australia', vieName: 'Úc' },
     population: { total: 27508632, updatedAt: '22 Jun 2024' },
     region: 'Oceania',
     startOfWeek: 'monday',
@@ -1576,7 +1576,7 @@ export const countries = [
     independent: true,
     languages: ['Chinese'],
     latlng: [35, 105],
-    name: { common: 'China', official: "People's Republic of China", vieName: 'Trung Quốc; Trung Hoa' },
+    name: { common: 'China', official: "People's Republic of China", vieName: 'Trung Quốc' },
     population: { total: 1424420000, updatedAt: '22 Jun 2024' },
     region: 'Asia',
     startOfWeek: 'monday',
@@ -1917,7 +1917,7 @@ export const countries = [
     independent: true,
     languages: ['Greek', 'Turkish'],
     latlng: [35, 33],
-    name: { common: 'Cyprus', official: 'Republic of Cyprus', vieName: 'Síp; Cộng hòa Síp' },
+    name: { common: 'Cyprus', official: 'Republic of Cyprus', vieName: 'Síp' },
     population: { total: 888005, updatedAt: '31 Dec 2019' },
     region: 'Europe',
     startOfWeek: 'monday',
@@ -3789,7 +3789,7 @@ export const countries = [
     independent: true,
     languages: ['Japanese'],
     latlng: [36, 138],
-    name: { common: 'Japan', official: 'Japan', vieName: 'Nhật Bản; Nhật' },
+    name: { common: 'Japan', official: 'Japan', vieName: 'Nhật Bản' },
     population: { total: 125480000, updatedAt: '1 Mar 2021' },
     region: 'Asia',
     startOfWeek: 'monday',
@@ -4291,7 +4291,7 @@ export const countries = [
     name: {
       common: 'Liechtenstein',
       official: 'Principality of Liechtenstein',
-      vieName: 'Lít-ten-xơ-tên; Lích-tên- xtanh; Lích-then-xtai-in'
+      vieName: 'Lít-ten-xơ-tên'
     },
     population: { total: 39062, updatedAt: '31 Dec 2020' },
     region: 'Europe',
@@ -4493,7 +4493,7 @@ export const countries = [
     independent: true,
     languages: ['English', 'Malay'],
     latlng: [2.5, 112.5],
-    name: { common: 'Malaysia', official: 'Malaysia', vieName: 'Ma-lai-xi-a; Mã Lai' },
+    name: { common: 'Malaysia', official: 'Malaysia', vieName: 'Mã Lai' },
     population: { total: 35056704, updatedAt: '22 Jun 2024' },
     region: 'Asia',
     startOfWeek: 'sunday',
@@ -4627,7 +4627,7 @@ export const countries = [
     name: {
       common: 'Marshall Islands',
       official: 'Republic of the Marshall Islands',
-      vieName: 'Quần đảo Marshall; Quần đảo Mác-san'
+      vieName: 'Quần đảo Mác-san'
     },
     population: { total: 54516, updatedAt: '1 Jul 2021' },
     region: 'Oceania',
@@ -4788,7 +4788,7 @@ export const countries = [
     independent: true,
     languages: ['Spanish'],
     latlng: [23, -102],
-    name: { common: 'Mexico', official: 'United Mexican States', vieName: 'Mễ Tây Cơ; Mê-hi-cô' },
+    name: { common: 'Mexico', official: 'United Mexican States', vieName: 'Mê-hi-cô' },
     population: { total: 126014024, updatedAt: '2 Mar 2020' },
     region: 'Americas',
     startOfWeek: 'monday',
@@ -5286,7 +5286,7 @@ export const countries = [
     independent: true,
     languages: ['English', 'Māori', 'New Zealand Sign Language'],
     latlng: [-41, 174],
-    name: { common: 'New Zealand', official: 'New Zealand', vieName: 'New Zealand; Niu Di-lân' },
+    name: { common: 'New Zealand', official: 'New Zealand', vieName: 'Niu Di-lân' },
     population: { total: 5478476, updatedAt: '22 Jun 2024' },
     region: 'Oceania',
     startOfWeek: 'monday',
@@ -5516,7 +5516,7 @@ export const countries = [
     name: {
       common: 'North Macedonia',
       official: 'Republic of North Macedonia',
-      vieName: 'Bắc Macedonia; Bắc Ma-xê-đô-ni-a'
+      vieName: 'Bắc Ma-xê-đô-ni-a'
     },
     population: { total: 2077132, updatedAt: '' },
     region: 'Europe',
@@ -5684,7 +5684,7 @@ export const countries = [
     independent: true,
     languages: ['English', 'Palauan'],
     latlng: [7.5, 134.5],
-    name: { common: 'Palau', official: 'Republic of Palau', vieName: 'Pa-lau; Pa-lao' },
+    name: { common: 'Palau', official: 'Republic of Palau', vieName: 'Pa-lao' },
     population: { total: 17957, updatedAt: '1 Jul 2021' },
     region: 'Oceania',
     startOfWeek: 'monday',
@@ -5755,7 +5755,7 @@ export const countries = [
     independent: true,
     languages: ['Spanish'],
     latlng: [9, -80],
-    name: { common: 'Panama', official: 'Republic of Panama', vieName: 'Panama;Pa-na-ma' },
+    name: { common: 'Panama', official: 'Republic of Panama', vieName: 'Pa-na-ma' },
     population: { total: 4278500, updatedAt: '1 Jul 2020' },
     region: 'Americas',
     startOfWeek: 'monday',
@@ -5791,7 +5791,7 @@ export const countries = [
     name: {
       common: 'Papua New Guinea',
       official: 'Independent State of Papua New Guinea',
-      vieName: 'Papua New Guinea; Pa-pua Niu Ghi-nê'
+      vieName: 'Pa-pua Niu Ghi-nê'
     },
     population: { total: 9122994, updatedAt: '1 Jul 2021' },
     region: 'Oceania',
@@ -6092,7 +6092,7 @@ export const countries = [
     name: {
       common: 'Republic of the Congo',
       official: 'Republic of the Congo',
-      vieName: 'Cộng hòa Congo; Công-gô; Cộng hòa Công-gô'
+      vieName: 'Công-gô'
     },
     population: { total: 5657000, updatedAt: '' },
     region: 'Africa',
@@ -6542,7 +6542,7 @@ export const countries = [
     independent: true,
     languages: ['Italian'],
     latlng: [43.76666666, 12.41666666],
-    name: { common: 'San Marino', official: 'Republic of San Marino', vieName: 'San Marino; Xan Ma-ri-nô' },
+    name: { common: 'San Marino', official: 'Republic of San Marino', vieName: 'Xan Ma-ri-nô' },
     population: { total: 33600, updatedAt: '28 Feb 2021' },
     region: 'Europe',
     startOfWeek: 'monday',
@@ -6742,7 +6742,7 @@ export const countries = [
     independent: true,
     languages: ['English'],
     latlng: [8.5, -11.5],
-    name: { common: 'Sierra Leone', official: 'Republic of Sierra Leone', vieName: 'Sierra Leone; Xi-ê-ra Lê-ôn' },
+    name: { common: 'Sierra Leone', official: 'Republic of Sierra Leone', vieName: 'Xi-ê-ra Lê-ôn' },
     population: { total: 8297882, updatedAt: '1 Jul 2021' },
     region: 'Africa',
     startOfWeek: 'monday',
@@ -7084,7 +7084,7 @@ export const countries = [
     independent: true,
     languages: ['English'],
     latlng: [7, 30],
-    name: { common: 'South Sudan', official: 'Republic of South Sudan', vieName: 'Nam Sudan; Nam Xu Đăng' },
+    name: { common: 'South Sudan', official: 'Republic of South Sudan', vieName: 'Nam Xu Đăng' },
     population: { total: 13249924, updatedAt: '1 Jul 2020' },
     region: 'Africa',
     startOfWeek: 'sunday',
@@ -7154,7 +7154,7 @@ export const countries = [
     name: {
       common: 'Sri Lanka',
       official: 'Democratic Socialist Republic of Sri Lanka',
-      vieName: 'Sri Lanca; Xri Lan-ca'
+      vieName: 'Sri Lanca'
     },
     population: { total: 21919000, updatedAt: '1 Jul 2020' },
     region: 'Asia',
@@ -7884,7 +7884,7 @@ export const countries = [
     independent: true,
     languages: ['Ukrainian'],
     latlng: [49, 32],
-    name: { common: 'Ukraine', official: 'Ukraine', vieName: 'U-crai-na;Uycờrain' },
+    name: { common: 'Ukraine', official: 'Ukraine', vieName: 'U-crai-na' },
     population: { total: 41554836, updatedAt: '1 Feb 2021' },
     region: 'Europe',
     startOfWeek: 'monday',

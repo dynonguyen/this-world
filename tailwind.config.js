@@ -13,7 +13,10 @@ export default {
 
   theme: {
     extend: {
-      colors: { 'neutral-divider': 'rgb(var(--neutral-divider) / <alpha-value>)' },
+      colors: {
+        'neutral-divider': 'rgb(var(--neutral-divider) / <alpha-value>)',
+        'neutral-main': 'rgb(var(--neutral-main) / <alpha-value>)'
+      },
       screens: { sm: '576px' }
     }
   },
@@ -47,7 +50,9 @@ export default {
           ...themes.winter,
           error: '#FF5962',
           primary: '#ec60ce',
-          '--neutral-divider': '229 231 235' // gray.200
+
+          '--neutral-divider': '229 231 235', // gray.200
+          '--neutral-main': '148 163 184' // gray.400
         }
       },
       {
@@ -55,13 +60,15 @@ export default {
           ...themes.dark,
           primary: '#e86fbd',
           neutral: '#1c212b',
+          'neutral-500': '#f0000',
           'neutral-content': '#d4d4d4',
           'base-100': '#2A303C',
           'base-200': '#242933',
           'base-300': '#20252E',
           'base-content': '#B2CCD6',
 
-          '--neutral-divider': '75 85 99' // gray.600
+          '--neutral-divider': '75 85 99', // gray.600
+          '--neutral-main': '156 163 175' // gray.400
         }
       }
     ],

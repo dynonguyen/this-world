@@ -122,5 +122,5 @@ function editData() {
   generateCountriesFile(data)
 }
 
-validateAndRewrite()
+validateAndRewrite(true)
 // editData()

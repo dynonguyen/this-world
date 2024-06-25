@@ -24,7 +24,9 @@ const sort = computed<{ items: SortItem[]; current?: SortItem }>(() => {
     { label: 'Population', by: 'population.total', order: SortOrder.ASC },
     { label: 'Population', by: 'population.total', order: SortOrder.DESC },
     { label: 'Area', by: 'area', order: SortOrder.ASC },
-    { label: 'Area', by: 'area', order: SortOrder.DESC }
+    { label: 'Area', by: 'area', order: SortOrder.DESC },
+    { label: 'GDP 2022', by: 'gdp', order: SortOrder.ASC },
+    { label: 'GDP 2022', by: 'gdp', order: SortOrder.DESC }
   ].map(item => ({ ...item, active: sortedField === item.by && item.order === sortedOrder }))
   const sortedItem = items.find(item => item.active)
 
@@ -60,7 +62,7 @@ const getSortIcon = (order: SortOrder) => (order === SortOrder.ASC ? 'uil-sort-a
       />
     </template>
     <template #list>
-      <li v-for="s in sort.items" :key="s.by" @click="handleSortChange(s)">
+      <li v-for="s in sort.items" :key="s.by + s.order" @click="handleSortChange(s)">
         <FilterItem v-bind="s" :icon="getSortIcon(s.order)" />
       </li>
     </template>

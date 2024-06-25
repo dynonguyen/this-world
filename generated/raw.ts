@@ -14,7 +14,7 @@ export const countries = [
     continents: ['Asia'],
     currencies: [{ code: 'AFN', name: 'Afghan afghani', symbol: '؋' }],
     fifaCode: 'AFG',
-    flag: 'https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg',
+    flag: 'https://flagcdn.com/af.svg',
     flagSymbol: '🇦🇫',
     googleMap: 'https://goo.gl/maps/BXBGw7yUUFknCfva9',
     independent: true,
@@ -30,7 +30,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Afghanistan',
-    dialingCode: '93'
+    dialingCode: '93',
+    fifaMenRanking: { points: 1034.37, rank: 151 },
+    gdp2022: 0
   },
   {
     area: 1580,
@@ -61,7 +63,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Åland_Islands',
-    dialingCode: '3'
+    dialingCode: '3',
+    gdp2022: 0
   },
   {
     area: 27400,
@@ -92,7 +95,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Albania',
-    dialingCode: '355'
+    dialingCode: '355',
+    fifaMenRanking: { points: 1379.4, rank: 66 },
+    gdp2022: 18.88
   },
   {
     area: 2381741,
@@ -123,7 +128,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Algeria',
-    dialingCode: '213'
+    dialingCode: '213',
+    gdp2022: 191.91
   },
   {
     area: 199,
@@ -154,7 +160,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/American_Samoa',
-    dialingCode: '1-684'
+    dialingCode: '1-684',
+    gdp2022: 0
   },
   {
     area: 468,
@@ -185,7 +192,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Andorra',
-    dialingCode: '376'
+    dialingCode: '376',
+    fifaMenRanking: { points: 996.05, rank: 162 },
+    gdp2022: 3.35
   },
   {
     area: 1246700,
@@ -216,7 +225,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Angola',
-    dialingCode: '244'
+    dialingCode: '244',
+    gdp2022: 106.71
   },
   {
     area: 91,
@@ -247,7 +257,9 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Anguilla',
-    dialingCode: '1-264'
+    dialingCode: '1-264',
+    fifaMenRanking: { points: 779.86, rank: 209 },
+    gdp2022: 0
   },
   {
     area: 14200000,
@@ -278,7 +290,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Antarctica',
-    dialingCode: '672'
+    dialingCode: '672',
+    gdp2022: 0
   },
   {
     area: 442,
@@ -309,7 +322,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Antigua_and_Barbuda',
-    dialingCode: '1-268'
+    dialingCode: '1-268',
+    fifaMenRanking: { points: 1052.8, rank: 148 },
+    gdp2022: 1.76
   },
   {
     area: 2736690,
@@ -348,7 +363,9 @@ export const countries = [
       { year: 1986, place: 'champion' },
       { year: 1978, place: 'champion' },
       { year: 1930, place: 'runner-up' }
-    ]
+    ],
+    fifaMenRanking: { points: 1860.14, rank: 1 },
+    gdp2022: 632.77
   },
   {
     area: 28470,
@@ -379,7 +396,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Armenia',
-    dialingCode: '374'
+    dialingCode: '374',
+    fifaMenRanking: { points: 1230.79, rank: 96 },
+    gdp2022: 19.5
   },
   {
     area: 180,
@@ -410,7 +429,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Aruba',
-    dialingCode: '297'
+    dialingCode: '297',
+    gdp2022: 0
   },
   {
     area: 7682300,
@@ -431,7 +451,7 @@ export const countries = [
     independent: true,
     languages: ['English'],
     latlng: [-27, 133],
-    name: { common: 'Australia', official: 'Commonwealth of Australia', vieName: 'Úc; Ô-xtrây-li-a' },
+    name: { common: 'Australia', official: 'Commonwealth of Australia', vieName: 'Úc' },
     population: { total: 27508632, updatedAt: '22 Jun 2024' },
     region: 'Oceania',
     startOfWeek: 'monday',
@@ -441,7 +461,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Australia',
-    dialingCode: '61'
+    dialingCode: '61',
+    fifaMenRanking: { points: 1571.29, rank: 23 },
+    gdp2022: 1675.42
   },
   {
     area: 82520,
@@ -473,7 +495,9 @@ export const countries = [
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Austria',
     dialingCode: '43',
-    fifaMenWorldCup: [{ year: 1954, place: 'third' }]
+    fifaMenWorldCup: [{ year: 1954, place: 'third' }],
+    fifaMenRanking: { points: 1560.03, rank: 25 },
+    gdp2022: 471.4
   },
   {
     area: 82650,
@@ -504,7 +528,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Azerbaijan',
-    dialingCode: '994'
+    dialingCode: '994',
+    fifaMenRanking: { points: 1179.88, rank: 111 },
+    gdp2022: 78.72
   },
   {
     area: 10010,
@@ -538,7 +564,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Bahamas',
-    dialingCode: '1-242'
+    dialingCode: '1-242',
+    gdp2022: 12.9
   },
   {
     area: 778,
@@ -569,7 +596,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Bahrain',
-    dialingCode: '973'
+    dialingCode: '973',
+    fifaMenRanking: { points: 1302.86, rank: 81 },
+    gdp2022: 44.39
   },
   {
     area: 130170,
@@ -600,7 +629,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Bangladesh',
-    dialingCode: '880'
+    dialingCode: '880',
+    gdp2022: 460.2
   },
   {
     area: 431,
@@ -631,7 +661,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Barbados',
-    dialingCode: '1-246'
+    dialingCode: '1-246',
+    fifaMenRanking: { points: 932.64, rank: 177 },
+    gdp2022: 5.64
   },
   {
     area: 202900,
@@ -662,7 +694,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Belarus',
-    dialingCode: '375'
+    dialingCode: '375',
+    fifaMenRanking: { points: 1219.78, rank: 98 },
+    gdp2022: 72.79
   },
   {
     area: 30280,
@@ -694,7 +728,9 @@ export const countries = [
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Belgium',
     dialingCode: '32',
-    fifaMenWorldCup: [{ year: 2018, place: 'third' }]
+    fifaMenWorldCup: [{ year: 2018, place: 'third' }],
+    fifaMenRanking: { points: 1797.98, rank: 3 },
+    gdp2022: 578.6
   },
   {
     area: 22810,
@@ -725,7 +761,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Belize',
-    dialingCode: '501'
+    dialingCode: '501',
+    fifaMenRanking: { points: 901.43, rank: 184 },
+    gdp2022: 2.82
   },
   {
     area: 112760,
@@ -756,7 +794,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Benin',
-    dialingCode: '229'
+    dialingCode: '229',
+    fifaMenRanking: { points: 1254.18, rank: 91 },
+    gdp2022: 17.4
   },
   {
     area: 54,
@@ -787,7 +827,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Bermuda',
-    dialingCode: '1-441'
+    dialingCode: '1-441',
+    gdp2022: 0
   },
   {
     area: 38140,
@@ -821,7 +862,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Bhutan',
-    dialingCode: '975'
+    dialingCode: '975',
+    gdp2022: 0
   },
   {
     area: 1083300,
@@ -852,7 +894,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Bolivia',
-    dialingCode: '591'
+    dialingCode: '591',
+    fifaMenRanking: { points: 1282.43, rank: 84 },
+    gdp2022: 43.07
   },
   {
     area: 51200,
@@ -873,11 +917,7 @@ export const countries = [
     independent: true,
     languages: ['Bosnian', 'Croatian', 'Serbian'],
     latlng: [44, 18],
-    name: {
-      common: 'Bosnia and Herzegovina',
-      official: 'Bosnia and Herzegovina',
-      vieName: 'Bô-xnia Héc-dê-gô-vi-na'
-    },
+    name: { common: 'Bosnia and Herzegovina', official: 'Bosnia and Herzegovina', vieName: 'Bô-xnia Héc-dê-gô-vi-na' },
     population: { total: 3332593, updatedAt: '1 Jul 2019' },
     region: 'Europe',
     startOfWeek: 'monday',
@@ -887,7 +927,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Bosnia_and_Herzegovina',
-    dialingCode: '387'
+    dialingCode: '387',
+    fifaMenRanking: { points: 1332.3, rank: 75 },
+    gdp2022: 24.53
   },
   {
     area: 566730,
@@ -918,7 +960,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Botswana',
-    dialingCode: '267'
+    dialingCode: '267',
+    gdp2022: 20.35
   },
   {
     area: 49,
@@ -949,7 +992,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Bouvet_Island',
-    dialingCode: '47'
+    dialingCode: '47',
+    gdp2022: 0
   },
   {
     area: 8460415,
@@ -991,7 +1035,9 @@ export const countries = [
       { year: 1958, place: 'champion' },
       { year: 1950, place: 'runner-up' },
       { year: 1938, place: 'third' }
-    ]
+    ],
+    fifaMenRanking: { points: 1791.85, rank: 4 },
+    gdp2022: 1920.1
   },
   {
     area: 60,
@@ -1026,7 +1072,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/British_Indian_Ocean_Territory',
-    dialingCode: '246'
+    dialingCode: '246',
+    gdp2022: 0
   },
   {
     area: 151,
@@ -1057,7 +1104,9 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/British_Virgin_Islands',
-    dialingCode: '1-284'
+    dialingCode: '1-284',
+    fifaMenRanking: { points: 801.29, rank: 207 },
+    gdp2022: 0
   },
   {
     area: 5270,
@@ -1091,7 +1140,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Brunei',
-    dialingCode: '673'
+    dialingCode: '673',
+    gdp2022: 16.68
   },
   {
     area: 108489,
@@ -1122,7 +1172,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Bulgaria',
-    dialingCode: '359'
+    dialingCode: '359',
+    gdp2022: 89.04
   },
   {
     area: 273800,
@@ -1153,7 +1204,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Burkina_Faso',
-    dialingCode: '226'
+    dialingCode: '226',
+    fifaMenRanking: { points: 1375.16, rank: 67 },
+    gdp2022: 18.88
   },
   {
     area: 25680,
@@ -1184,7 +1237,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Burundi',
-    dialingCode: '257'
+    dialingCode: '257',
+    fifaMenRanking: { points: 1091.24, rank: 140 },
+    gdp2022: 3.07
   },
   {
     area: 176520,
@@ -1218,7 +1273,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Cambodia',
-    dialingCode: '855'
+    dialingCode: '855',
+    gdp2022: 29.96
   },
   {
     area: 472710,
@@ -1249,7 +1305,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Cameroon',
-    dialingCode: '237'
+    dialingCode: '237',
+    fifaMenRanking: { points: 1458.47, rank: 49 },
+    gdp2022: 44.34
   },
   {
     area: 9093507,
@@ -1280,7 +1338,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Canada',
-    dialingCode: '1'
+    dialingCode: '1',
+    fifaMenRanking: { points: 1461.74, rank: 48 },
+    gdp2022: 2139.84
   },
   {
     area: 4033,
@@ -1311,7 +1371,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Cape_Verde',
-    dialingCode: '238'
+    dialingCode: '238',
+    fifaMenRanking: { points: 1380.53, rank: 65 },
+    gdp2022: 0
   },
   {
     area: 328,
@@ -1346,7 +1408,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Caribbean_Netherlands',
-    dialingCode: ''
+    dialingCode: '',
+    gdp2022: 0
   },
   {
     area: 240,
@@ -1377,7 +1440,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Cayman_Islands',
-    dialingCode: '1-345'
+    dialingCode: '1-345',
+    gdp2022: 0
   },
   {
     area: 622984,
@@ -1398,11 +1462,7 @@ export const countries = [
     independent: true,
     languages: ['French', 'Sango'],
     latlng: [7, 21],
-    name: {
-      common: 'Central African Republic',
-      official: 'Central African Republic',
-      vieName: 'Cộng hòa Trung Phi'
-    },
+    name: { common: 'Central African Republic', official: 'Central African Republic', vieName: 'Cộng hòa Trung Phi' },
     population: { total: 5633412, updatedAt: '1 Jul 2020' },
     region: 'Africa',
     startOfWeek: 'monday',
@@ -1412,7 +1472,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Central_African_Republic',
-    dialingCode: '236'
+    dialingCode: '236',
+    gdp2022: 2.38
   },
   {
     area: 1259200,
@@ -1443,7 +1504,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Chad',
-    dialingCode: '235'
+    dialingCode: '235',
+    gdp2022: 12.7
   },
   {
     area: 743812,
@@ -1475,7 +1537,8 @@ export const countries = [
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Chile',
     dialingCode: '56',
-    fifaMenWorldCup: [{ year: 1962, place: 'third' }]
+    fifaMenWorldCup: [{ year: 1962, place: 'third' }],
+    gdp2022: 301.02
   },
   {
     area: 9326410,
@@ -1513,7 +1576,7 @@ export const countries = [
     independent: true,
     languages: ['Chinese'],
     latlng: [35, 105],
-    name: { common: 'China', official: "People's Republic of China", vieName: 'Trung Quốc; Trung Hoa' },
+    name: { common: 'China', official: "People's Republic of China", vieName: 'Trung Quốc' },
     population: { total: 1424420000, updatedAt: '22 Jun 2024' },
     region: 'Asia',
     startOfWeek: 'monday',
@@ -1523,7 +1586,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/China',
-    dialingCode: '86'
+    dialingCode: '86',
+    fifaMenRanking: { points: 1267.51, rank: 88 },
+    gdp2022: 17963.2
   },
   {
     area: 135,
@@ -1544,11 +1609,7 @@ export const countries = [
     independent: false,
     languages: ['English'],
     latlng: [-10.5, 105.66666666],
-    name: {
-      common: 'Christmas Island',
-      official: 'Territory of Christmas Island',
-      vieName: 'Christmas Island'
-    },
+    name: { common: 'Christmas Island', official: 'Territory of Christmas Island', vieName: 'Christmas Island' },
     population: { total: 1966, updatedAt: '30 Jun 2020' },
     region: 'Oceania',
     startOfWeek: 'monday',
@@ -1558,7 +1619,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Christmas_Island',
-    dialingCode: '61'
+    dialingCode: '61',
+    gdp2022: 0
   },
   {
     area: 14,
@@ -1593,7 +1655,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Cocos_(Keeling)_Islands',
-    dialingCode: '61'
+    dialingCode: '61',
+    gdp2022: 0
   },
   {
     area: 1038700,
@@ -1624,7 +1687,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Colombia',
-    dialingCode: '57'
+    dialingCode: '57',
+    fifaMenRanking: { points: 1669.44, rank: 13 },
+    gdp2022: 343.94
   },
   {
     area: 1861,
@@ -1655,7 +1720,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Comoros',
-    dialingCode: '269'
+    dialingCode: '269',
+    fifaMenRanking: { points: 1158.71, rank: 119 },
+    gdp2022: 1.24
   },
   {
     area: 236,
@@ -1689,7 +1756,9 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Cook_Islands',
-    dialingCode: '682'
+    dialingCode: '682',
+    fifaMenRanking: { points: 896.59, rank: 187 },
+    gdp2022: 0
   },
   {
     area: 51060,
@@ -1720,7 +1789,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Costa_Rica',
-    dialingCode: '506'
+    dialingCode: '506',
+    gdp2022: 68.38
   },
   {
     area: 55974,
@@ -1756,7 +1826,8 @@ export const countries = [
       { year: 2022, place: 'third' },
       { year: 2018, place: 'runner-up' },
       { year: 1998, place: 'third' }
-    ]
+    ],
+    gdp2022: 70.96
   },
   {
     area: 103800,
@@ -1790,7 +1861,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Cuba',
-    dialingCode: '53'
+    dialingCode: '53',
+    fifaMenRanking: { points: 975.01, rank: 169 },
+    gdp2022: 0
   },
   {
     area: 444,
@@ -1821,7 +1894,9 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Curaçao',
-    dialingCode: '599'
+    dialingCode: '599',
+    fifaMenRanking: { points: 1272.71, rank: 87 },
+    gdp2022: 0
   },
   {
     area: 9241,
@@ -1842,7 +1917,7 @@ export const countries = [
     independent: true,
     languages: ['Greek', 'Turkish'],
     latlng: [35, 33],
-    name: { common: 'Cyprus', official: 'Republic of Cyprus', vieName: 'Síp; Cộng hòa Síp' },
+    name: { common: 'Cyprus', official: 'Republic of Cyprus', vieName: 'Síp' },
     population: { total: 888005, updatedAt: '31 Dec 2019' },
     region: 'Europe',
     startOfWeek: 'monday',
@@ -1852,7 +1927,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Cyprus',
-    dialingCode: '357'
+    dialingCode: '357',
+    fifaMenRanking: { points: 1136.78, rank: 126 },
+    gdp2022: 28.44
   },
   {
     area: 77187,
@@ -1887,7 +1964,9 @@ export const countries = [
     fifaMenWorldCup: [
       { year: 1962, place: 'runner-up' },
       { year: 1934, place: 'runner-up' }
-    ]
+    ],
+    fifaMenRanking: { points: 1506.23, rank: 34 },
+    gdp2022: 0
   },
   {
     area: 42434,
@@ -1918,7 +1997,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Denmark',
-    dialingCode: '45'
+    dialingCode: '45',
+    gdp2022: 395.4
   },
   {
     area: 23180,
@@ -1949,7 +2029,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Djibouti',
-    dialingCode: '253'
+    dialingCode: '253',
+    fifaMenRanking: { points: 875.13, rank: 193 },
+    gdp2022: 0
   },
   {
     area: 750,
@@ -1980,7 +2062,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Dominica',
-    dialingCode: '1-767'
+    dialingCode: '1-767',
+    fifaMenRanking: { points: 912.93, rank: 182 },
+    gdp2022: 0.61
   },
   {
     area: 48320,
@@ -2011,7 +2095,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Dominican_Republic',
-    dialingCode: '1-809, 1-829, 1-849'
+    dialingCode: '1-809, 1-829, 1-849',
+    fifaMenRanking: { points: 1045.64, rank: 150 },
+    gdp2022: 113.64
   },
   {
     area: 2267048,
@@ -2042,7 +2128,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/DR_Congo',
-    dialingCode: '243'
+    dialingCode: '243',
+    fifaMenRanking: { points: 1400.93, rank: 61 },
+    gdp2022: 58.07
   },
   {
     area: 276841,
@@ -2073,7 +2161,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Ecuador',
-    dialingCode: '593'
+    dialingCode: '593',
+    fifaMenRanking: { points: 1517.54, rank: 30 },
+    gdp2022: 115.05
   },
   {
     area: 995450,
@@ -2104,7 +2194,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Egypt',
-    dialingCode: '20'
+    dialingCode: '20',
+    fifaMenRanking: { points: 1502.34, rank: 36 },
+    gdp2022: 476.75
   },
   {
     area: 20720,
@@ -2135,7 +2227,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/El_Salvador',
-    dialingCode: '503'
+    dialingCode: '503',
+    fifaMenRanking: { points: 1303.65, rank: 80 },
+    gdp2022: 32.49
   },
   {
     area: 28051,
@@ -2156,11 +2250,7 @@ export const countries = [
     independent: true,
     languages: ['French', 'Portuguese', 'Spanish'],
     latlng: [2, 10],
-    name: {
-      common: 'Equatorial Guinea',
-      official: 'Republic of Equatorial Guinea',
-      vieName: 'Ghi-xê Xích đạo'
-    },
+    name: { common: 'Equatorial Guinea', official: 'Republic of Equatorial Guinea', vieName: 'Ghi-xê Xích đạo' },
     population: { total: 1454789, updatedAt: '1 Jul 2020' },
     region: 'Africa',
     startOfWeek: 'monday',
@@ -2170,7 +2260,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Equatorial_Guinea',
-    dialingCode: '240'
+    dialingCode: '240',
+    gdp2022: 11.81
   },
   {
     area: 101000,
@@ -2201,7 +2292,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Eritrea',
-    dialingCode: '291'
+    dialingCode: '291',
+    gdp2022: 0
   },
   {
     area: 42388,
@@ -2232,7 +2324,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Estonia',
-    dialingCode: '372'
+    dialingCode: '372',
+    fifaMenRanking: { points: 1146.47, rank: 123 },
+    gdp2022: 38.1
   },
   {
     area: 17200,
@@ -2266,7 +2360,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Eswatini',
-    dialingCode: '268'
+    dialingCode: '268',
+    fifaMenRanking: { points: 1025.18, rank: 154 },
+    gdp2022: 4.85
   },
   {
     area: 1096570,
@@ -2297,7 +2393,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Ethiopia',
-    dialingCode: '251'
+    dialingCode: '251',
+    fifaMenRanking: { points: 1066.16, rank: 143 },
+    gdp2022: 126.78
   },
   {
     area: 12173,
@@ -2328,7 +2426,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Falkland_Islands',
-    dialingCode: '500'
+    dialingCode: '500',
+    gdp2022: 0
   },
   {
     area: 1393,
@@ -2362,7 +2461,9 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Faroe_Islands',
-    dialingCode: '298'
+    dialingCode: '298',
+    fifaMenRanking: { points: 1093.7, rank: 139 },
+    gdp2022: 0
   },
   {
     area: 18272,
@@ -2393,7 +2494,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Fiji',
-    dialingCode: '679'
+    dialingCode: '679',
+    gdp2022: 4.94
   },
   {
     area: 303815,
@@ -2424,7 +2526,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Finland',
-    dialingCode: '358'
+    dialingCode: '358',
+    fifaMenRanking: { points: 1393.4, rank: 63 },
+    gdp2022: 280.83
   },
   {
     area: 543940,
@@ -2478,7 +2582,9 @@ export const countries = [
       { year: 1998, place: 'champion' },
       { year: 1986, place: 'third' },
       { year: 1958, place: 'third' }
-    ]
+    ],
+    fifaMenRanking: { points: 1837.47, rank: 2 },
+    gdp2022: 2782.91
   },
   {
     area: 83534,
@@ -2509,7 +2615,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/French_Guiana',
-    dialingCode: ''
+    dialingCode: '',
+    gdp2022: 0
   },
   {
     area: 3827,
@@ -2540,7 +2647,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/French_Polynesia',
-    dialingCode: '689'
+    dialingCode: '689',
+    gdp2022: 0
   },
   {
     area: 7747,
@@ -2575,7 +2683,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/French_Southern_and_Antarctic_Lands',
-    dialingCode: ''
+    dialingCode: '',
+    gdp2022: 0
   },
   {
     area: 257670,
@@ -2606,7 +2715,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Gabon',
-    dialingCode: '241'
+    dialingCode: '241',
+    fifaMenRanking: { points: 1288.45, rank: 83 },
+    gdp2022: 21.07
   },
   {
     area: 10120,
@@ -2637,7 +2748,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Gambia',
-    dialingCode: '220'
+    dialingCode: '220',
+    gdp2022: 2.27
   },
   {
     area: 69490,
@@ -2668,7 +2780,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Georgia',
-    dialingCode: '995'
+    dialingCode: '995',
+    fifaMenRanking: { points: 1338.91, rank: 74 },
+    gdp2022: 24.61
   },
   {
     area: 349390,
@@ -2713,7 +2827,8 @@ export const countries = [
       { year: 1966, place: 'runner-up' },
       { year: 1954, place: 'champion' },
       { year: 1934, place: 'third' }
-    ]
+    ],
+    gdp2022: 4072.19
   },
   {
     area: 227533,
@@ -2744,7 +2859,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Ghana',
-    dialingCode: '233'
+    dialingCode: '233',
+    fifaMenRanking: { points: 1381.25, rank: 64 },
+    gdp2022: 72.84
   },
   {
     area: 6.8,
@@ -2775,7 +2892,9 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Gibraltar',
-    dialingCode: '350'
+    dialingCode: '350',
+    fifaMenRanking: { points: 836.14, rank: 198 },
+    gdp2022: 0
   },
   {
     area: 128900,
@@ -2806,7 +2925,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Greece',
-    dialingCode: '30'
+    dialingCode: '30',
+    gdp2022: 219.07
   },
   {
     area: 2166086,
@@ -2837,7 +2957,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Greenland',
-    dialingCode: '299'
+    dialingCode: '299',
+    gdp2022: 0
   },
   {
     area: 340,
@@ -2868,7 +2989,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Grenada',
-    dialingCode: '1-473'
+    dialingCode: '1-473',
+    gdp2022: 1.26
   },
   {
     area: 1628,
@@ -2899,7 +3021,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Guadeloupe',
-    dialingCode: ''
+    dialingCode: '',
+    gdp2022: 0
   },
   {
     area: 540,
@@ -2930,7 +3053,9 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Guam',
-    dialingCode: '1-671'
+    dialingCode: '1-671',
+    fifaMenRanking: { points: 821.91, rank: 204 },
+    gdp2022: 0
   },
   {
     area: 107160,
@@ -2961,7 +3086,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Guatemala',
-    dialingCode: '502'
+    dialingCode: '502',
+    gdp2022: 95
   },
   {
     area: 78,
@@ -2995,7 +3121,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Guernsey',
-    dialingCode: '44-1481'
+    dialingCode: '44-1481',
+    gdp2022: 0
   },
   {
     area: 245717,
@@ -3026,7 +3153,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Guinea',
-    dialingCode: '224'
+    dialingCode: '224',
+    gdp2022: 21.23
   },
   {
     area: 28120,
@@ -3057,7 +3185,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Guinea-Bissau',
-    dialingCode: '245'
+    dialingCode: '245',
+    fifaMenRanking: { points: 1168.49, rank: 115 },
+    gdp2022: 1.63
   },
   {
     area: 196850,
@@ -3088,7 +3218,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Guyana',
-    dialingCode: '592'
+    dialingCode: '592',
+    fifaMenRanking: { points: 1026.61, rank: 153 },
+    gdp2022: 15.36
   },
   {
     area: 27560,
@@ -3119,7 +3251,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Haiti',
-    dialingCode: '509'
+    dialingCode: '509',
+    gdp2022: 20.25
   },
   {
     area: 412,
@@ -3154,7 +3287,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Heard_Island_and_McDonald_Islands',
-    dialingCode: ''
+    dialingCode: '',
+    gdp2022: 0
   },
   {
     area: 111890,
@@ -3185,7 +3319,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Honduras',
-    dialingCode: '504'
+    dialingCode: '504',
+    gdp2022: 31.72
   },
   {
     area: 1050,
@@ -3220,7 +3355,9 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Hong_Kong',
-    dialingCode: '852'
+    dialingCode: '852',
+    fifaMenRanking: { points: 1011.91, rank: 157 },
+    gdp2022: 359.84
   },
   {
     area: 91260,
@@ -3255,7 +3392,9 @@ export const countries = [
     fifaMenWorldCup: [
       { year: 1954, place: 'runner-up' },
       { year: 1938, place: 'runner-up' }
-    ]
+    ],
+    fifaMenRanking: { points: 1529, rank: 27 },
+    gdp2022: 178.79
   },
   {
     area: 100830,
@@ -3286,7 +3425,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Iceland',
-    dialingCode: '354'
+    dialingCode: '354',
+    fifaMenRanking: { points: 1353.48, rank: 70 },
+    gdp2022: 27.84
   },
   {
     area: 2973190,
@@ -3317,7 +3458,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/India',
-    dialingCode: '91'
+    dialingCode: '91',
+    fifaMenRanking: { points: 1139.39, rank: 124 },
+    gdp2022: 3385.09
   },
   {
     area: 1811569,
@@ -3348,7 +3491,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Indonesia',
-    dialingCode: '62'
+    dialingCode: '62',
+    fifaMenRanking: { points: 1108.73, rank: 134 },
+    gdp2022: 1319.1
   },
   {
     area: 1531595,
@@ -3379,7 +3524,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Iran',
-    dialingCode: '98'
+    dialingCode: '98',
+    fifaMenRanking: { points: 1611.16, rank: 20 },
+    gdp2022: 388.54
   },
   {
     area: 437367,
@@ -3410,7 +3557,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Iraq',
-    dialingCode: '964'
+    dialingCode: '964',
+    fifaMenRanking: { points: 1433.07, rank: 55 },
+    gdp2022: 264.18
   },
   {
     area: 68883,
@@ -3441,7 +3590,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Ireland',
-    dialingCode: '353'
+    dialingCode: '353',
+    fifaMenRanking: { points: 1403.84, rank: 60 },
+    gdp2022: 529.25
   },
   {
     area: 570,
@@ -3475,7 +3626,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Isle_of_Man',
-    dialingCode: '44-1624'
+    dialingCode: '44-1624',
+    gdp2022: 0
   },
   {
     area: 21497,
@@ -3506,7 +3658,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Israel',
-    dialingCode: '972'
+    dialingCode: '972',
+    fifaMenRanking: { points: 1312.54, rank: 79 },
+    gdp2022: 522.03
   },
   {
     area: 295717,
@@ -3546,7 +3700,9 @@ export const countries = [
       { year: 1970, place: 'runner-up' },
       { year: 1938, place: 'champion' },
       { year: 1934, place: 'champion' }
-    ]
+    ],
+    fifaMenRanking: { points: 1724.37, rank: 10 },
+    gdp2022: 2010.43
   },
   {
     area: 318000,
@@ -3577,7 +3733,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Ivory_Coast',
-    dialingCode: '225'
+    dialingCode: '225',
+    fifaMenRanking: { points: 1499.69, rank: 37 },
+    gdp2022: 0
   },
   {
     area: 10830,
@@ -3608,7 +3766,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Jamaica',
-    dialingCode: '1-876'
+    dialingCode: '1-876',
+    fifaMenRanking: { points: 1442.82, rank: 53 },
+    gdp2022: 17.1
   },
   {
     area: 364485,
@@ -3629,7 +3789,7 @@ export const countries = [
     independent: true,
     languages: ['Japanese'],
     latlng: [36, 138],
-    name: { common: 'Japan', official: 'Japan', vieName: 'Nhật Bản; Nhật' },
+    name: { common: 'Japan', official: 'Japan', vieName: 'Nhật Bản' },
     population: { total: 125480000, updatedAt: '1 Mar 2021' },
     region: 'Asia',
     startOfWeek: 'monday',
@@ -3639,7 +3799,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Japan',
-    dialingCode: '81'
+    dialingCode: '81',
+    fifaMenRanking: { points: 1628.81, rank: 17 },
+    gdp2022: 4231.14
   },
   {
     area: 116,
@@ -3673,7 +3835,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Jersey',
-    dialingCode: '44-1534'
+    dialingCode: '44-1534',
+    gdp2022: 0
   },
   {
     area: 88794,
@@ -3704,7 +3867,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Jordan',
-    dialingCode: '962'
+    dialingCode: '962',
+    fifaMenRanking: { points: 1374.13, rank: 68 },
+    gdp2022: 47.45
   },
   {
     area: 2699700,
@@ -3735,7 +3900,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Kazakhstan',
-    dialingCode: '7'
+    dialingCode: '7',
+    fifaMenRanking: { points: 1193.62, rank: 109 },
+    gdp2022: 220.62
   },
   {
     area: 569140,
@@ -3766,7 +3933,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Kenya',
-    dialingCode: '254'
+    dialingCode: '254',
+    fifaMenRanking: { points: 1195.45, rank: 108 },
+    gdp2022: 113.42
   },
   {
     area: 811,
@@ -3790,11 +3959,7 @@ export const countries = [
     independent: true,
     languages: ['English', 'Gilbertese'],
     latlng: [1.41666666, 173],
-    name: {
-      common: 'Kiribati',
-      official: 'Independent and Sovereign Republic of Kiribati',
-      vieName: 'Ki-ri-ba-ti'
-    },
+    name: { common: 'Kiribati', official: 'Independent and Sovereign Republic of Kiribati', vieName: 'Ki-ri-ba-ti' },
     population: { total: 120740, updatedAt: '1 Jul 2021' },
     region: 'Oceania',
     startOfWeek: 'monday',
@@ -3804,7 +3969,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Kiribati',
-    dialingCode: '686'
+    dialingCode: '686',
+    gdp2022: 0.22
   },
   {
     area: 10887,
@@ -3835,7 +4001,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Kosovo',
-    dialingCode: '383'
+    dialingCode: '383',
+    gdp2022: 0
   },
   {
     area: 17818,
@@ -3866,7 +4033,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Kuwait',
-    dialingCode: '965'
+    dialingCode: '965',
+    gdp2022: 184.56
   },
   {
     area: 191800,
@@ -3897,7 +4065,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Kyrgyzstan',
-    dialingCode: '996'
+    dialingCode: '996',
+    fifaMenRanking: { points: 1213.58, rank: 101 },
+    gdp2022: 10.93
   },
   {
     area: 230800,
@@ -3928,7 +4098,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Laos',
-    dialingCode: '856'
+    dialingCode: '856',
+    fifaMenRanking: { points: 889.62, rank: 189 },
+    gdp2022: 15.72
   },
   {
     area: 62230,
@@ -3959,7 +4131,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Latvia',
-    dialingCode: '371'
+    dialingCode: '371',
+    fifaMenRanking: { points: 1095.98, rank: 138 },
+    gdp2022: 41.15
   },
   {
     area: 10230,
@@ -3990,7 +4164,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Lebanon',
-    dialingCode: '961'
+    dialingCode: '961',
+    fifaMenRanking: { points: 1167.64, rank: 117 },
+    gdp2022: 0
   },
   {
     area: 30355,
@@ -4024,7 +4200,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Lesotho',
-    dialingCode: '266'
+    dialingCode: '266',
+    gdp2022: 2.55
   },
   {
     area: 96320,
@@ -4055,7 +4232,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Liberia',
-    dialingCode: '231'
+    dialingCode: '231',
+    fifaMenRanking: { points: 1067.05, rank: 142 },
+    gdp2022: 4
   },
   {
     area: 1759540,
@@ -4086,7 +4265,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Libya',
-    dialingCode: '218'
+    dialingCode: '218',
+    fifaMenRanking: { points: 1165.73, rank: 118 },
+    gdp2022: 45.75
   },
   {
     area: 160,
@@ -4110,7 +4291,7 @@ export const countries = [
     name: {
       common: 'Liechtenstein',
       official: 'Principality of Liechtenstein',
-      vieName: 'Lít-ten-xơ-tên; Lích-tên- xtanh; Lích-then-xtai-in'
+      vieName: 'Lít-ten-xơ-tên'
     },
     population: { total: 39062, updatedAt: '31 Dec 2020' },
     region: 'Europe',
@@ -4121,7 +4302,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Liechtenstein',
-    dialingCode: '423'
+    dialingCode: '423',
+    fifaMenRanking: { points: 835.83, rank: 199 },
+    gdp2022: 0
   },
   {
     area: 62610,
@@ -4152,7 +4335,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Lithuania',
-    dialingCode: '370'
+    dialingCode: '370',
+    fifaMenRanking: { points: 1100.66, rank: 136 },
+    gdp2022: 70.33
   },
   {
     area: 2574,
@@ -4183,7 +4368,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Luxembourg',
-    dialingCode: '352'
+    dialingCode: '352',
+    fifaMenRanking: { points: 1276.73, rank: 85 },
+    gdp2022: 82.27
   },
   {
     area: 30,
@@ -4218,7 +4405,9 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Macau',
-    dialingCode: '853'
+    dialingCode: '853',
+    fifaMenRanking: { points: 896.62, rank: 186 },
+    gdp2022: 0
   },
   {
     area: 581540,
@@ -4249,7 +4438,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Madagascar',
-    dialingCode: '261'
+    dialingCode: '261',
+    gdp2022: 14.95
   },
   {
     area: 94080,
@@ -4280,7 +4470,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Malawi',
-    dialingCode: '265'
+    dialingCode: '265',
+    fifaMenRanking: { points: 1137.83, rank: 125 },
+    gdp2022: 13.16
   },
   {
     area: 328657,
@@ -4301,7 +4493,7 @@ export const countries = [
     independent: true,
     languages: ['English', 'Malay'],
     latlng: [2.5, 112.5],
-    name: { common: 'Malaysia', official: 'Malaysia', vieName: 'Ma-lai-xi-a; Mã Lai' },
+    name: { common: 'Malaysia', official: 'Malaysia', vieName: 'Mã Lai' },
     population: { total: 35056704, updatedAt: '22 Jun 2024' },
     region: 'Asia',
     startOfWeek: 'sunday',
@@ -4311,7 +4503,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Malaysia',
-    dialingCode: '60'
+    dialingCode: '60',
+    gdp2022: 406.31
   },
   {
     area: 300,
@@ -4342,7 +4535,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Maldives',
-    dialingCode: '960'
+    dialingCode: '960',
+    fifaMenRanking: { points: 1003.48, rank: 160 },
+    gdp2022: 6.19
   },
   {
     area: 1220190,
@@ -4373,7 +4568,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Mali',
-    dialingCode: '223'
+    dialingCode: '223',
+    fifaMenRanking: { points: 1456.74, rank: 50 },
+    gdp2022: 18.83
   },
   {
     area: 315,
@@ -4404,7 +4601,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Malta',
-    dialingCode: '356'
+    dialingCode: '356',
+    fifaMenRanking: { points: 970.62, rank: 172 },
+    gdp2022: 17.77
   },
   {
     area: 180,
@@ -4428,7 +4627,7 @@ export const countries = [
     name: {
       common: 'Marshall Islands',
       official: 'Republic of the Marshall Islands',
-      vieName: 'Quần đảo Marshall; Quần đảo Mác-san'
+      vieName: 'Quần đảo Mác-san'
     },
     population: { total: 54516, updatedAt: '1 Jul 2021' },
     region: 'Oceania',
@@ -4439,7 +4638,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Marshall_Islands',
-    dialingCode: '692'
+    dialingCode: '692',
+    gdp2022: 0.28
   },
   {
     area: 1128,
@@ -4470,7 +4670,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Martinique',
-    dialingCode: ''
+    dialingCode: '',
+    gdp2022: 0
   },
   {
     area: 1030700,
@@ -4501,7 +4702,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Mauritania',
-    dialingCode: '222'
+    dialingCode: '222',
+    gdp2022: 10.38
   },
   {
     area: 2030,
@@ -4532,7 +4734,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Mauritius',
-    dialingCode: '230'
+    dialingCode: '230',
+    gdp2022: 12.9
   },
   {
     area: 374,
@@ -4563,7 +4766,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Mayotte',
-    dialingCode: '262'
+    dialingCode: '262',
+    gdp2022: 0
   },
   {
     area: 1943950,
@@ -4584,7 +4788,7 @@ export const countries = [
     independent: true,
     languages: ['Spanish'],
     latlng: [23, -102],
-    name: { common: 'Mexico', official: 'United Mexican States', vieName: 'Mễ Tây Cơ; Mê-hi-cô' },
+    name: { common: 'Mexico', official: 'United Mexican States', vieName: 'Mê-hi-cô' },
     population: { total: 126014024, updatedAt: '2 Mar 2020' },
     region: 'Americas',
     startOfWeek: 'monday',
@@ -4594,7 +4798,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Mexico',
-    dialingCode: '52'
+    dialingCode: '52',
+    fifaMenRanking: { points: 1652.33, rank: 15 },
+    gdp2022: 1414.19
   },
   {
     area: 700,
@@ -4625,7 +4831,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Micronesia',
-    dialingCode: '691'
+    dialingCode: '691',
+    gdp2022: 0.43
   },
   {
     area: 32970,
@@ -4656,7 +4863,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Moldova',
-    dialingCode: '373'
+    dialingCode: '373',
+    fifaMenRanking: { points: 1033.75, rank: 152 },
+    gdp2022: 14.42
   },
   {
     area: 2,
@@ -4687,7 +4896,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Monaco',
-    dialingCode: '377'
+    dialingCode: '377',
+    gdp2022: 0
   },
   {
     area: 1557507,
@@ -4718,7 +4928,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Mongolia',
-    dialingCode: '976'
+    dialingCode: '976',
+    fifaMenRanking: { points: 884.92, rank: 190 },
+    gdp2022: 16.81
   },
   {
     area: 13452,
@@ -4749,7 +4961,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Montenegro',
-    dialingCode: '382'
+    dialingCode: '382',
+    fifaMenRanking: { points: 1345.02, rank: 72 },
+    gdp2022: 6.1
   },
   {
     area: 100,
@@ -4780,7 +4994,9 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Montserrat',
-    dialingCode: '1-664'
+    dialingCode: '1-664',
+    fifaMenRanking: { points: 934.46, rank: 176 },
+    gdp2022: 0
   },
   {
     area: 446300,
@@ -4811,7 +5027,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Morocco',
-    dialingCode: '212'
+    dialingCode: '212',
+    fifaMenRanking: { points: 1669.44, rank: 12 },
+    gdp2022: 134.18
   },
   {
     area: 786380,
@@ -4842,7 +5060,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Mozambique',
-    dialingCode: '258'
+    dialingCode: '258',
+    fifaMenRanking: { points: 1205.82, rank: 103 },
+    gdp2022: 17.85
   },
   {
     area: 653508,
@@ -4873,7 +5093,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Myanmar',
-    dialingCode: '95'
+    dialingCode: '95',
+    gdp2022: 59.36
   },
   {
     area: 823290,
@@ -4907,7 +5128,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Namibia',
-    dialingCode: '264'
+    dialingCode: '264',
+    fifaMenRanking: { points: 1219.83, rank: 97 },
+    gdp2022: 12.61
   },
   {
     area: 20,
@@ -4938,7 +5161,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Nauru',
-    dialingCode: '674'
+    dialingCode: '674',
+    gdp2022: 0
   },
   {
     area: 143350,
@@ -4969,7 +5193,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Nepal',
-    dialingCode: '977'
+    dialingCode: '977',
+    gdp2022: 40.83
   },
   {
     area: 33893,
@@ -5006,7 +5231,8 @@ export const countries = [
       { year: 2010, place: 'runner-up' },
       { year: 1978, place: 'runner-up' },
       { year: 1974, place: 'runner-up' }
-    ]
+    ],
+    gdp2022: 991.12
   },
   {
     area: 18275,
@@ -5037,7 +5263,9 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/New_Caledonia',
-    dialingCode: '687'
+    dialingCode: '687',
+    fifaMenRanking: { points: 1008.92, rank: 158 },
+    gdp2022: 0
   },
   {
     area: 264537,
@@ -5058,7 +5286,7 @@ export const countries = [
     independent: true,
     languages: ['English', 'Māori', 'New Zealand Sign Language'],
     latlng: [-41, 174],
-    name: { common: 'New Zealand', official: 'New Zealand', vieName: 'New Zealand; Niu Di-lân' },
+    name: { common: 'New Zealand', official: 'New Zealand', vieName: 'Niu Di-lân' },
     population: { total: 5478476, updatedAt: '22 Jun 2024' },
     region: 'Oceania',
     startOfWeek: 'monday',
@@ -5068,7 +5296,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/New_Zealand',
-    dialingCode: '64'
+    dialingCode: '64',
+    fifaMenRanking: { points: 1197.68, rank: 107 },
+    gdp2022: 247.23
   },
   {
     area: 120340,
@@ -5099,7 +5329,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Nicaragua',
-    dialingCode: '505'
+    dialingCode: '505',
+    gdp2022: 15.67
   },
   {
     area: 1266700,
@@ -5130,7 +5361,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Niger',
-    dialingCode: '227'
+    dialingCode: '227',
+    gdp2022: 13.97
   },
   {
     area: 910770,
@@ -5161,7 +5393,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Nigeria',
-    dialingCode: '234'
+    dialingCode: '234',
+    fifaMenRanking: { points: 1498.93, rank: 38 },
+    gdp2022: 477.39
   },
   {
     area: 260,
@@ -5192,7 +5426,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Niue',
-    dialingCode: '683'
+    dialingCode: '683',
+    gdp2022: 0
   },
   {
     area: 36,
@@ -5223,7 +5458,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Norfolk_Island',
-    dialingCode: ''
+    dialingCode: '',
+    gdp2022: 0
   },
   {
     area: 120410,
@@ -5254,7 +5490,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/North_Korea',
-    dialingCode: '850'
+    dialingCode: '850',
+    fifaMenRanking: { points: 1183.96, rank: 110 },
+    gdp2022: 0
   },
   {
     area: 25220,
@@ -5278,7 +5516,7 @@ export const countries = [
     name: {
       common: 'North Macedonia',
       official: 'Republic of North Macedonia',
-      vieName: 'Bắc Macedonia; Bắc Ma-xê-đô-ni-a'
+      vieName: 'Bắc Ma-xê-đô-ni-a'
     },
     population: { total: 2077132, updatedAt: '' },
     region: 'Europe',
@@ -5289,7 +5527,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/North_Macedonia',
-    dialingCode: '389'
+    dialingCode: '389',
+    fifaMenRanking: { points: 1348.63, rank: 71 },
+    gdp2022: 13.56
   },
   {
     area: 457,
@@ -5324,7 +5564,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Northern_Mariana_Islands',
-    dialingCode: '1-670'
+    dialingCode: '1-670',
+    gdp2022: 0
   },
   {
     area: 304282,
@@ -5355,7 +5596,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Norway',
-    dialingCode: '47'
+    dialingCode: '47',
+    fifaMenRanking: { points: 1466.48, rank: 46 },
+    gdp2022: 579.27
   },
   {
     area: 309500,
@@ -5386,7 +5629,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Oman',
-    dialingCode: '968'
+    dialingCode: '968',
+    gdp2022: 114.67
   },
   {
     area: 857143,
@@ -5417,7 +5661,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Pakistan',
-    dialingCode: '92'
+    dialingCode: '92',
+    fifaMenRanking: { points: 842.59, rank: 197 },
+    gdp2022: 376.53
   },
   {
     area: 459,
@@ -5438,7 +5684,7 @@ export const countries = [
     independent: true,
     languages: ['English', 'Palauan'],
     latlng: [7.5, 134.5],
-    name: { common: 'Palau', official: 'Republic of Palau', vieName: 'Pa-lau; Pa-lao' },
+    name: { common: 'Palau', official: 'Republic of Palau', vieName: 'Pa-lao' },
     population: { total: 17957, updatedAt: '1 Jul 2021' },
     region: 'Oceania',
     startOfWeek: 'monday',
@@ -5448,7 +5694,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Palau',
-    dialingCode: '680'
+    dialingCode: '680',
+    gdp2022: 0
   },
   {
     area: 6025,
@@ -5483,7 +5730,8 @@ export const countries = [
     unMember: false,
     unObserver: true,
     wiki: 'https://wikipedia.org/wiki/Palestine',
-    dialingCode: '970'
+    dialingCode: '970',
+    gdp2022: 19.11
   },
   {
     area: 74180,
@@ -5507,7 +5755,7 @@ export const countries = [
     independent: true,
     languages: ['Spanish'],
     latlng: [9, -80],
-    name: { common: 'Panama', official: 'Republic of Panama', vieName: 'Panama;Pa-na-ma' },
+    name: { common: 'Panama', official: 'Republic of Panama', vieName: 'Pa-na-ma' },
     population: { total: 4278500, updatedAt: '1 Jul 2020' },
     region: 'Americas',
     startOfWeek: 'monday',
@@ -5517,7 +5765,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Panama',
-    dialingCode: '507'
+    dialingCode: '507',
+    fifaMenRanking: { points: 1482.1, rank: 43 },
+    gdp2022: 76.52
   },
   {
     area: 452860,
@@ -5541,7 +5791,7 @@ export const countries = [
     name: {
       common: 'Papua New Guinea',
       official: 'Independent State of Papua New Guinea',
-      vieName: 'Papua New Guinea; Pa-pua Niu Ghi-nê'
+      vieName: 'Pa-pua Niu Ghi-nê'
     },
     population: { total: 9122994, updatedAt: '1 Jul 2021' },
     region: 'Oceania',
@@ -5552,7 +5802,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Papua_New_Guinea',
-    dialingCode: '675'
+    dialingCode: '675',
+    fifaMenRanking: { points: 985.32, rank: 165 },
+    gdp2022: 30.63
   },
   {
     area: 397300,
@@ -5583,7 +5835,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Paraguay',
-    dialingCode: '595'
+    dialingCode: '595',
+    gdp2022: 41.72
   },
   {
     area: 1279996,
@@ -5614,7 +5867,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Peru',
-    dialingCode: '51'
+    dialingCode: '51',
+    fifaMenRanking: { points: 1515.01, rank: 31 },
+    gdp2022: 242.63
   },
   {
     area: 298170,
@@ -5645,7 +5900,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Philippines',
-    dialingCode: '63'
+    dialingCode: '63',
+    gdp2022: 404.28
   },
   {
     area: 47,
@@ -5676,7 +5932,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Pitcairn_Islands',
-    dialingCode: '64'
+    dialingCode: '64',
+    gdp2022: 0
   },
   {
     area: 304255,
@@ -5711,7 +5968,9 @@ export const countries = [
     fifaMenWorldCup: [
       { year: 1982, place: 'third' },
       { year: 1974, place: 'third' }
-    ]
+    ],
+    fifaMenRanking: { points: 1541.49, rank: 26 },
+    gdp2022: 688.18
   },
   {
     area: 91606,
@@ -5743,7 +6002,8 @@ export const countries = [
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Portugal',
     dialingCode: '351',
-    fifaMenWorldCup: [{ year: 1966, place: 'third' }]
+    fifaMenWorldCup: [{ year: 1966, place: 'third' }],
+    gdp2022: 251.94
   },
   {
     area: 8868,
@@ -5774,7 +6034,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Puerto_Rico',
-    dialingCode: '1-787, 1-939'
+    dialingCode: '1-787, 1-939',
+    gdp2022: 0
   },
   {
     area: 11586,
@@ -5805,7 +6066,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Qatar',
-    dialingCode: '974'
+    dialingCode: '974',
+    fifaMenRanking: { points: 1504.06, rank: 35 },
+    gdp2022: 237.3
   },
   {
     area: 342000,
@@ -5829,7 +6092,7 @@ export const countries = [
     name: {
       common: 'Republic of the Congo',
       official: 'Republic of the Congo',
-      vieName: 'Cộng hòa Congo; Công-gô; Cộng hòa Công-gô'
+      vieName: 'Công-gô'
     },
     population: { total: 5657000, updatedAt: '' },
     region: 'Africa',
@@ -5840,7 +6103,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Republic_of_the_Congo',
-    dialingCode: '242'
+    dialingCode: '242',
+    gdp2022: 0
   },
   {
     area: 2511,
@@ -5871,7 +6135,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Réunion',
-    dialingCode: '262'
+    dialingCode: '262',
+    gdp2022: 0
   },
   {
     area: 230080,
@@ -5902,7 +6167,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Romania',
-    dialingCode: '40'
+    dialingCode: '40',
+    fifaMenRanking: { points: 1462.35, rank: 47 },
+    gdp2022: 301.26
   },
   {
     area: 16376870,
@@ -5943,7 +6210,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Russia',
-    dialingCode: '7'
+    dialingCode: '7',
+    fifaMenRanking: { points: 1506.58, rank: 33 },
+    gdp2022: 2240.42
   },
   {
     area: 24670,
@@ -5974,7 +6243,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Rwanda',
-    dialingCode: '250'
+    dialingCode: '250',
+    fifaMenRanking: { points: 1114.15, rank: 131 },
+    gdp2022: 13.31
   },
   {
     area: 20,
@@ -5995,11 +6266,7 @@ export const countries = [
     independent: false,
     languages: ['French'],
     latlng: [18.5, -63.41666666],
-    name: {
-      common: 'Saint Barthélemy',
-      official: 'Collectivity of Saint Barthélemy',
-      vieName: 'Saint Barthélemy'
-    },
+    name: { common: 'Saint Barthélemy', official: 'Collectivity of Saint Barthélemy', vieName: 'Saint Barthélemy' },
     population: { total: 10124, updatedAt: '1 Jan 2018' },
     region: 'Americas',
     startOfWeek: 'monday',
@@ -6009,7 +6276,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Saint_Barthélemy',
-    dialingCode: '590'
+    dialingCode: '590',
+    gdp2022: 0
   },
   {
     area: 394,
@@ -6047,7 +6315,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Saint_Helena,_Ascension_and_Tristan_da_Cunha',
-    dialingCode: '290'
+    dialingCode: '290',
+    gdp2022: 0
   },
   {
     area: 261,
@@ -6082,7 +6351,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Saint_Kitts_and_Nevis',
-    dialingCode: '1-869'
+    dialingCode: '1-869',
+    gdp2022: 0
   },
   {
     area: 610,
@@ -6113,7 +6383,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Saint_Lucia',
-    dialingCode: '1-758'
+    dialingCode: '1-758',
+    fifaMenRanking: { points: 979.57, rank: 168 },
+    gdp2022: 2.07
   },
   {
     area: 53,
@@ -6144,7 +6416,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Saint_Martin',
-    dialingCode: '590'
+    dialingCode: '590',
+    gdp2022: 0
   },
   {
     area: 230,
@@ -6179,7 +6452,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Saint_Pierre_and_Miquelon',
-    dialingCode: '508'
+    dialingCode: '508',
+    gdp2022: 0
   },
   {
     area: 389,
@@ -6214,7 +6488,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Saint_Vincent_and_the_Grenadines',
-    dialingCode: '1-784'
+    dialingCode: '1-784',
+    gdp2022: 0
   },
   {
     area: 2780,
@@ -6245,7 +6520,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Samoa',
-    dialingCode: '685'
+    dialingCode: '685',
+    gdp2022: 0.83
   },
   {
     area: 61,
@@ -6266,7 +6542,7 @@ export const countries = [
     independent: true,
     languages: ['Italian'],
     latlng: [43.76666666, 12.41666666],
-    name: { common: 'San Marino', official: 'Republic of San Marino', vieName: 'San Marino; Xan Ma-ri-nô' },
+    name: { common: 'San Marino', official: 'Republic of San Marino', vieName: 'Xan Ma-ri-nô' },
     population: { total: 33600, updatedAt: '28 Feb 2021' },
     region: 'Europe',
     startOfWeek: 'monday',
@@ -6276,7 +6552,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/San_Marino',
-    dialingCode: '378'
+    dialingCode: '378',
+    fifaMenRanking: { points: 739.64, rank: 210 },
+    gdp2022: 0
   },
   {
     area: 964,
@@ -6311,7 +6589,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/São_Tomé_and_Príncipe',
-    dialingCode: '239'
+    dialingCode: '239',
+    fifaMenRanking: { points: 878.09, rank: 192 },
+    gdp2022: 0
   },
   {
     area: 2149690,
@@ -6342,7 +6622,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Saudi_Arabia',
-    dialingCode: '966'
+    dialingCode: '966',
+    gdp2022: 1108.15
   },
   {
     area: 192530,
@@ -6373,7 +6654,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Senegal',
-    dialingCode: '221'
+    dialingCode: '221',
+    fifaMenRanking: { points: 1623.34, rank: 18 },
+    gdp2022: 27.68
   },
   {
     area: 88499,
@@ -6404,7 +6687,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Serbia',
-    dialingCode: '381'
+    dialingCode: '381',
+    fifaMenRanking: { points: 1514.76, rank: 32 },
+    gdp2022: 63.5
   },
   {
     area: 457,
@@ -6435,7 +6720,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Seychelles',
-    dialingCode: '248'
+    dialingCode: '248',
+    gdp2022: 1.59
   },
   {
     area: 72180,
@@ -6456,11 +6742,7 @@ export const countries = [
     independent: true,
     languages: ['English'],
     latlng: [8.5, -11.5],
-    name: {
-      common: 'Sierra Leone',
-      official: 'Republic of Sierra Leone',
-      vieName: 'Sierra Leone; Xi-ê-ra Lê-ôn'
-    },
+    name: { common: 'Sierra Leone', official: 'Republic of Sierra Leone', vieName: 'Xi-ê-ra Lê-ôn' },
     population: { total: 8297882, updatedAt: '1 Jul 2021' },
     region: 'Africa',
     startOfWeek: 'monday',
@@ -6470,7 +6752,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Sierra_Leone',
-    dialingCode: '232'
+    dialingCode: '232',
+    fifaMenRanking: { points: 1149.4, rank: 122 },
+    gdp2022: 3.97
   },
   {
     area: 726,
@@ -6501,7 +6785,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Singapore',
-    dialingCode: '65'
+    dialingCode: '65',
+    fifaMenRanking: { points: 1008.26, rank: 159 },
+    gdp2022: 466.79
   },
   {
     area: 34,
@@ -6532,7 +6818,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Sint_Maarten',
-    dialingCode: '1-721'
+    dialingCode: '1-721',
+    gdp2022: 0
   },
   {
     area: 48080,
@@ -6563,7 +6850,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Slovakia',
-    dialingCode: '421'
+    dialingCode: '421',
+    fifaMenRanking: { points: 1467.77, rank: 45 },
+    gdp2022: 115.47
   },
   {
     area: 20151,
@@ -6594,7 +6883,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Slovenia',
-    dialingCode: '386'
+    dialingCode: '386',
+    fifaMenRanking: { points: 1429.74, rank: 57 },
+    gdp2022: 62.12
   },
   {
     area: 27990,
@@ -6625,7 +6916,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Solomon_Islands',
-    dialingCode: '677'
+    dialingCode: '677',
+    gdp2022: 1.6
   },
   {
     area: 627340,
@@ -6656,7 +6948,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Somalia',
-    dialingCode: '252'
+    dialingCode: '252',
+    fifaMenRanking: { points: 829.81, rank: 202 },
+    gdp2022: 0
   },
   {
     area: 1214470,
@@ -6699,7 +6993,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/South_Africa',
-    dialingCode: '27'
+    dialingCode: '27',
+    gdp2022: 405.87
   },
   {
     area: 3903,
@@ -6734,7 +7029,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/South_Georgia',
-    dialingCode: ''
+    dialingCode: '',
+    gdp2022: 0
   },
   {
     area: 97600,
@@ -6765,7 +7061,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/South_Korea',
-    dialingCode: '82'
+    dialingCode: '82',
+    fifaMenRanking: { points: 1572.87, rank: 22 },
+    gdp2022: 1665.25
   },
   {
     area: 644329,
@@ -6786,7 +7084,7 @@ export const countries = [
     independent: true,
     languages: ['English'],
     latlng: [7, 30],
-    name: { common: 'South Sudan', official: 'Republic of South Sudan', vieName: 'Nam Sudan; Nam Xu Đăng' },
+    name: { common: 'South Sudan', official: 'Republic of South Sudan', vieName: 'Nam Xu Đăng' },
     population: { total: 13249924, updatedAt: '1 Jul 2020' },
     region: 'Africa',
     startOfWeek: 'sunday',
@@ -6796,7 +7094,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/South_Sudan',
-    dialingCode: '211'
+    dialingCode: '211',
+    fifaMenRanking: { points: 980.02, rank: 167 },
+    gdp2022: 0
   },
   {
     area: 498980,
@@ -6828,7 +7128,9 @@ export const countries = [
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Spain',
     dialingCode: '34',
-    fifaMenWorldCup: [{ year: 2010, place: 'champion' }]
+    fifaMenWorldCup: [{ year: 2010, place: 'champion' }],
+    fifaMenRanking: { points: 1729.92, rank: 8 },
+    gdp2022: 1397.51
   },
   {
     area: 61860,
@@ -6852,7 +7154,7 @@ export const countries = [
     name: {
       common: 'Sri Lanka',
       official: 'Democratic Socialist Republic of Sri Lanka',
-      vieName: 'Sri Lanca; Xri Lan-ca'
+      vieName: 'Sri Lanca'
     },
     population: { total: 21919000, updatedAt: '1 Jul 2020' },
     region: 'Asia',
@@ -6863,7 +7165,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Sri_Lanka',
-    dialingCode: '94'
+    dialingCode: '94',
+    gdp2022: 74.4
   },
   {
     area: 1731671,
@@ -6894,7 +7197,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Sudan',
-    dialingCode: '249'
+    dialingCode: '249',
+    fifaMenRanking: { points: 1152.29, rank: 121 },
+    gdp2022: 51.66
   },
   {
     area: 156000,
@@ -6925,7 +7230,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Suriname',
-    dialingCode: '597'
+    dialingCode: '597',
+    fifaMenRanking: { points: 1087.77, rank: 141 },
+    gdp2022: 3.62
   },
   {
     area: 61399,
@@ -6946,11 +7253,7 @@ export const countries = [
     independent: false,
     languages: ['Norwegian'],
     latlng: [78, 20],
-    name: {
-      common: 'Svalbard and Jan Mayen',
-      official: 'Svalbard og Jan Mayen',
-      vieName: 'Svalbard and Jan Mayen'
-    },
+    name: { common: 'Svalbard and Jan Mayen', official: 'Svalbard og Jan Mayen', vieName: 'Svalbard and Jan Mayen' },
     population: { total: 2633, updatedAt: '1 Jul 2018' },
     region: 'Europe',
     startOfWeek: 'monday',
@@ -6960,7 +7263,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Svalbard_and_Jan_Mayen',
-    dialingCode: '47'
+    dialingCode: '47',
+    gdp2022: 0
   },
   {
     area: 407284,
@@ -6996,7 +7300,9 @@ export const countries = [
       { year: 1994, place: 'third' },
       { year: 1958, place: 'runner-up' },
       { year: 1950, place: 'third' }
-    ]
+    ],
+    fifaMenRanking: { points: 1522.19, rank: 28 },
+    gdp2022: 585.94
   },
   {
     area: 39510,
@@ -7027,7 +7333,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Switzerland',
-    dialingCode: '41'
+    dialingCode: '41',
+    gdp2022: 807.71
   },
   {
     area: 183630,
@@ -7058,7 +7365,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Syria',
-    dialingCode: '963'
+    dialingCode: '963',
+    fifaMenRanking: { points: 1246.68, rank: 93 },
+    gdp2022: 0
   },
   {
     area: 32260,
@@ -7089,7 +7398,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Taiwan',
-    dialingCode: '886'
+    dialingCode: '886',
+    gdp2022: 0
   },
   {
     area: 141510,
@@ -7120,7 +7430,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Tajikistan',
-    dialingCode: '992'
+    dialingCode: '992',
+    fifaMenRanking: { points: 1212.41, rank: 102 },
+    gdp2022: 10.49
   },
   {
     area: 885800,
@@ -7151,7 +7463,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Tanzania',
-    dialingCode: '255'
+    dialingCode: '255',
+    gdp2022: 75.71
   },
   {
     area: 510890,
@@ -7182,7 +7495,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Thailand',
-    dialingCode: '66'
+    dialingCode: '66',
+    fifaMenRanking: { points: 1218.56, rank: 100 },
+    gdp2022: 495.34
   },
   {
     area: 14874,
@@ -7213,7 +7528,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Timor-Leste',
-    dialingCode: '670'
+    dialingCode: '670',
+    fifaMenRanking: { points: 843.4, rank: 196 },
+    gdp2022: 3.16
   },
   {
     area: 54390,
@@ -7244,7 +7561,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Togo',
-    dialingCode: '228'
+    dialingCode: '228',
+    gdp2022: 8.13
   },
   {
     area: 12,
@@ -7275,7 +7593,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Tokelau',
-    dialingCode: '690'
+    dialingCode: '690',
+    gdp2022: 0
   },
   {
     area: 720,
@@ -7306,7 +7625,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Tonga',
-    dialingCode: '676'
+    dialingCode: '676',
+    gdp2022: 0
   },
   {
     area: 5127,
@@ -7327,11 +7647,7 @@ export const countries = [
     independent: true,
     languages: ['English'],
     latlng: [10.6918, -61.2225],
-    name: {
-      common: 'Trinidad and Tobago',
-      official: 'Republic of Trinidad and Tobago',
-      vieName: 'Trinidad và Tobago'
-    },
+    name: { common: 'Trinidad and Tobago', official: 'Republic of Trinidad and Tobago', vieName: 'Trinidad và Tobago' },
     population: { total: 1366725, updatedAt: '30 Jun 2020' },
     region: 'Americas',
     startOfWeek: 'monday',
@@ -7341,7 +7657,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Trinidad_and_Tobago',
-    dialingCode: '1-868'
+    dialingCode: '1-868',
+    gdp2022: 27.9
   },
   {
     area: 155360,
@@ -7372,7 +7689,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Tunisia',
-    dialingCode: '216'
+    dialingCode: '216',
+    fifaMenRanking: { points: 1494.06, rank: 41 },
+    gdp2022: 46.66
   },
   {
     area: 769632,
@@ -7404,7 +7723,9 @@ export const countries = [
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Turkey',
     dialingCode: '90',
-    fifaMenWorldCup: [{ year: 2002, place: 'third' }]
+    fifaMenWorldCup: [{ year: 2002, place: 'third' }],
+    fifaMenRanking: { points: 1493.38, rank: 42 },
+    gdp2022: 905.99
   },
   {
     area: 469930,
@@ -7435,7 +7756,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Turkmenistan',
-    dialingCode: '993'
+    dialingCode: '993',
+    fifaMenRanking: { points: 1065.42, rank: 144 },
+    gdp2022: 0
   },
   {
     area: 948,
@@ -7470,7 +7793,9 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Turks_and_Caicos_Islands',
-    dialingCode: '1-649'
+    dialingCode: '1-649',
+    fifaMenRanking: { points: 817.03, rank: 206 },
+    gdp2022: 0
   },
   {
     area: 26,
@@ -7504,7 +7829,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Tuvalu',
-    dialingCode: '688'
+    dialingCode: '688',
+    gdp2022: 0.06
   },
   {
     area: 200520,
@@ -7535,7 +7861,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Uganda',
-    dialingCode: '256'
+    dialingCode: '256',
+    fifaMenRanking: { points: 1242.96, rank: 94 },
+    gdp2022: 45.56
   },
   {
     area: 579330,
@@ -7556,7 +7884,7 @@ export const countries = [
     independent: true,
     languages: ['Ukrainian'],
     latlng: [49, 32],
-    name: { common: 'Ukraine', official: 'Ukraine', vieName: 'U-crai-na;Uycờrain' },
+    name: { common: 'Ukraine', official: 'Ukraine', vieName: 'U-crai-na' },
     population: { total: 41554836, updatedAt: '1 Feb 2021' },
     region: 'Europe',
     startOfWeek: 'monday',
@@ -7566,7 +7894,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Ukraine',
-    dialingCode: '380'
+    dialingCode: '380',
+    fifaMenRanking: { points: 1565.37, rank: 24 },
+    gdp2022: 160.5
   },
   {
     area: 82880,
@@ -7601,7 +7931,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/United_Arab_Emirates',
-    dialingCode: '971'
+    dialingCode: '971',
+    gdp2022: 507.54
   },
   {
     area: 242741,
@@ -7646,7 +7977,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/United_Kingdom',
-    dialingCode: '44'
+    dialingCode: '44',
+    gdp2022: 3070.67
   },
   {
     area: 9372610,
@@ -7690,7 +8022,9 @@ export const countries = [
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/United_States',
     dialingCode: '1',
-    fifaMenWorldCup: [{ year: 1930, place: 'third' }]
+    fifaMenWorldCup: [{ year: 1930, place: 'third' }],
+    fifaMenRanking: { points: 1676.52, rank: 11 },
+    gdp2022: 25462.7
   },
   {
     area: 34.2,
@@ -7725,7 +8059,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/United_States_Minor_Outlying_Islands',
-    dialingCode: ''
+    dialingCode: '',
+    gdp2022: 0
   },
   {
     area: 347,
@@ -7760,7 +8095,9 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/United_States_Virgin_Islands',
-    dialingCode: '1-340'
+    dialingCode: '1-340',
+    fifaMenRanking: { points: 797.29, rank: 208 },
+    gdp2022: 0
   },
   {
     area: 175015,
@@ -7795,7 +8132,8 @@ export const countries = [
     fifaMenWorldCup: [
       { year: 1950, place: 'champion' },
       { year: 1930, place: 'champion' }
-    ]
+    ],
+    gdp2022: 71.18
   },
   {
     area: 425400,
@@ -7826,7 +8164,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Uzbekistan',
-    dialingCode: '998'
+    dialingCode: '998',
+    fifaMenRanking: { points: 1397.41, rank: 62 },
+    gdp2022: 80.39
   },
   {
     area: 12189,
@@ -7857,7 +8197,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Vanuatu',
-    dialingCode: '678'
+    dialingCode: '678',
+    gdp2022: 0.98
   },
   {
     area: 0.49,
@@ -7888,7 +8229,8 @@ export const countries = [
     unMember: false,
     unObserver: true,
     wiki: 'https://wikipedia.org/wiki/Vatican_City',
-    dialingCode: '379'
+    dialingCode: '379',
+    gdp2022: 0
   },
   {
     area: 882050,
@@ -7919,7 +8261,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Venezuela',
-    dialingCode: '58'
+    dialingCode: '58',
+    fifaMenRanking: { points: 1442.29, rank: 54 },
+    gdp2022: 0
   },
   {
     area: 313429,
@@ -7950,7 +8294,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Vietnam',
-    dialingCode: '84'
+    dialingCode: '84',
+    gdp2022: 408.8
   },
   {
     area: 142,
@@ -7985,7 +8330,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Wallis_and_Futuna',
-    dialingCode: '681'
+    dialingCode: '681',
+    gdp2022: 0
   },
   {
     area: 266000,
@@ -8020,7 +8366,8 @@ export const countries = [
     unMember: false,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Western_Sahara',
-    dialingCode: '212'
+    dialingCode: '212',
+    gdp2022: 0
   },
   {
     area: 527968,
@@ -8051,7 +8398,9 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Yemen',
-    dialingCode: '967'
+    dialingCode: '967',
+    fifaMenRanking: { points: 1021.24, rank: 155 },
+    gdp2022: 0
   },
   {
     area: 743390,
@@ -8082,7 +8431,8 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Zambia',
-    dialingCode: '260'
+    dialingCode: '260',
+    gdp2022: 29.78
   },
   {
     area: 386850,
@@ -8129,6 +8479,7 @@ export const countries = [
     unMember: true,
     unObserver: false,
     wiki: 'https://wikipedia.org/wiki/Zimbabwe',
-    dialingCode: '263'
+    dialingCode: '263',
+    gdp2022: 20.68
   }
 ] as Country[]

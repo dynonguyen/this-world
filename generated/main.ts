@@ -3,8 +3,8 @@ import fs from 'fs'
 import path from 'path'
 import { z } from 'zod'
 import { Continent, Country } from '../src/types/Country'
+import { gdp2022 } from './gdp-2022'
 import { countries } from './raw'
-import { fifaMenWorldCup } from './worldcup'
 
 const stringRequired = z.string().trim().min(1)
 const stringOptional = z.string().trim().default('')
@@ -54,6 +54,7 @@ const validationSchema = z.object({
   unMember: z.boolean(),
   unObserver: z.boolean(),
   wiki: stringOptional,
+  gdp2022: z.number().optional().default(0),
   fifaMenWorldCup: z
     .array(
       z.object({
@@ -61,7 +62,8 @@ const validationSchema = z.object({
         place: z.union([z.literal('champion'), z.literal('runner-up'), z.literal('third')])
       })
     )
-    .optional()
+    .optional(),
+  fifaMenRanking: z.object({ points: z.number(), rank: z.number() }).optional()
 })
 
 const validateCountries = async () => {
@@ -111,21 +113,14 @@ async function validateAndRewrite(write = true) {
 
 function editData() {
   const data = countries.map(c => {
-    const worldCup = fifaMenWorldCup
-      .filter(wc => wc[c.name.common] || wc[c.name.official])
-      .map(wc => ({
-        year: wc.year,
-        place: wc[c.name.common] || wc[c.name.official]
-      }))
-
     return {
       ...c,
-      ...(worldCup.length > 0 && { fifaMenWorldCup: worldCup })
-    }
+      gdp2022: gdp2022[c.name.common] || gdp2022[c.name.official] || 0
+    } as Country
   })
 
   generateCountriesFile(data)
 }
 
-validateAndRewrite()
+validateAndRewrite(true)
 // editData()

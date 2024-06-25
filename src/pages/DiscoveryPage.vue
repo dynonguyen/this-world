@@ -11,7 +11,7 @@ import ViewAs from '~/features/discovery/components/ViewAs.vue'
 <template>
   <PageTitle>Discover Countries</PageTitle>
 
-  <div class="flex-v-center flex-wrap gap-2 justify-between">
+  <div class="flex-v-center flex-wrap gap-2 justify-between mb-6">
     <ViewAs />
 
     <div class="flex-v-center gap-2">
@@ -22,7 +22,5 @@ import ViewAs from '~/features/discovery/components/ViewAs.vue'
     </div>
   </div>
 
-  <div class="mt-4">
-    <CountriesGallery />
-  </div>
+  <CountriesGallery />
 </template>

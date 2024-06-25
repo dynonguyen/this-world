@@ -25,6 +25,8 @@ export type CountryFifaMenWorldCup = {
   place: 'champion' | 'runner-up' | 'third'
 }
 
+export type CountryFifaMenRanking = { rank: number; points: number }
+
 export enum Continent {
   Asia = 'Asia',
   Europe = 'Europe',
@@ -73,7 +75,9 @@ export type Country = {
   unMember: boolean // United Nations member status
   unObserver: boolean // United Nations observer status
   wiki: string
+  gdp2022: number // GDP in billion USD ( 0 = unknown )
   fifaMenWorldCup?: CountryFifaMenWorldCup[]
+  fifaMenRanking?: CountryFifaMenRanking
 }
 
 export type CountryMap = Record<string, Country>

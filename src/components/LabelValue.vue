@@ -21,7 +21,7 @@ withDefaults(defineProps<LabelValueProps>(), { labelWidth: 120 })
       <slot name="label">{{ $props.label }}:</slot>
     </div>
     <div class="text-sm font-medium grow" v-bind="attrs?.value">
-      <slot name="value">{{ $props.value }}:</slot>
+      <slot name="value">{{ $props.value }}</slot>
     </div>
   </div>
 </template>

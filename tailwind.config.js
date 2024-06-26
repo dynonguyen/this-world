@@ -44,6 +44,10 @@ export default {
 
   daisyui: {
     styled: true,
+    darkTheme: 'dark',
+    themeRoot: ':root',
+    utils: true,
+    logs: false,
     themes: [
       {
         light: {
@@ -71,10 +75,6 @@ export default {
           '--neutral-main': '156 163 175' // gray.400
         }
       }
-    ],
-    darkTheme: 'dark',
-    themeRoot: ':root',
-    utils: true,
-    logs: false
+    ]
   }
 }

@@ -14,3 +14,7 @@ export function safeJsonParse<T extends object>(raw: string): T {
     return {} as T
   }
 }
+
+export function numberWithCommas(value: number, delimiter = ',') {
+  return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, delimiter)
+}

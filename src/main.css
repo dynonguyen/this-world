@@ -9,6 +9,9 @@
 }
 
 @layer utilities {
+  .table :where(thead tr, tbody tr:not(:last-child), tbody tr:first-child:last-child) {
+    @apply dark:border-b-gray-700;
+  }
   .dropdown-content a[data-active='true'] {
     @apply !text-neutral-content !bg-neutral;
   }

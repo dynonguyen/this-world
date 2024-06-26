@@ -20,7 +20,7 @@ const isPageLoading = usePageLoading()
     </div>
 
     <div class="flex-1 flex flex-col overflow-y-auto overflow-x-hidden">
-      <div class="grow mx-auto p-4 max-w-6xl w-full">
+      <div class="grow mx-auto p-4 max-w-7xl w-full">
         <Loading v-if="!store.initialized || isPageLoading" />
         <RouterView v-else />
       </div>

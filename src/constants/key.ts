@@ -7,7 +7,8 @@ export const STORE_KEY = {
 
 export const LS_KEY = {
   THEME: 'this-world-theme',
-  LOCATION: 'this-world-location'
+  LOCATION: 'this-world-location',
+  FAVORITE_COUNTRIES: 'this-world-favorite-countries'
 }
 
 export const FILTER_QUERY_KEY = {

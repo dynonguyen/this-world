@@ -5,6 +5,7 @@ import MainLayout from '~/layouts/MainLayout.vue'
 // -----------------------------
 const OverviewPage = () => import('~/pages/OverviewPage.vue')
 const DiscoveryPage = () => import('~/pages/DiscoveryPage.vue')
+const CountryDetailPage = () => import('~/pages/CountryDetailPage.vue')
 const ComingSoonPage = () => import('~/pages/ComingSoonPage.vue')
 
 // -----------------------------
@@ -15,6 +16,7 @@ const routes: Readonly<RouteRecordRaw[]> = [
     children: [
       { path: PATH.OVERVIEW, name: 'Overview', component: OverviewPage },
       { path: PATH.DISCOVERY, name: 'Discovery', component: DiscoveryPage },
+      { path: PATH.COUNTRY, name: 'Country', component: CountryDetailPage },
       { path: PATH.MAP, name: 'Map', component: ComingSoonPage },
       { path: PATH.GAME, name: 'Game', component: ComingSoonPage },
       { path: '', redirect: PATH.OVERVIEW },

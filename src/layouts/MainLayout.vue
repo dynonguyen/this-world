@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
+import ErrorBoundary from '~/components/ErrorBoundary.vue'
 import Loading from '~/components/Loading.vue'
 import { usePageLoading } from '~/hooks/usePageLoading'
 import { useCountriesStore } from '~/stores/countries'
@@ -22,7 +23,9 @@ const isPageLoading = usePageLoading()
     <div class="flex-1 flex flex-col overflow-y-auto overflow-x-hidden">
       <div class="grow mx-auto p-4 max-w-7xl w-full">
         <Loading v-if="!store.initialized || isPageLoading" />
-        <RouterView v-else />
+        <ErrorBoundary v-else>
+          <RouterView />
+        </ErrorBoundary>
       </div>
 
       <div class="mt-auto">

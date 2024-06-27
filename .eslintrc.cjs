@@ -14,6 +14,9 @@ module.exports = {
   },
   rules: {
     'vue/multi-word-component-names': 'off',
-    '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: '^_', argsIgnorePattern: '^_' }]
+    '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: '^_', argsIgnorePattern: '^_' }],
+    'prettier/prettier': ['warn'],
+    'no-console': ['warn', { allow: ['error'] }],
+    camelcase: ['warn', { ignoreGlobals: true, ignoreImports: true, properties: 'never', ignoreDestructuring: true }]
   }
 }

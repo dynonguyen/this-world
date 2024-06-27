@@ -12,7 +12,8 @@
     "latlng",
     "pinia",
     "tailwindcss",
-    "unitednations"
+    "unitednations",
+    "VITE"
   ],
   "search.exclude": {
     "**/node_modules": true,

@@ -3,8 +3,6 @@ import { debounce, omit } from 'lodash-es'
 import { useRoute, useRouter } from 'vue-router'
 import { FILTER_QUERY_KEY } from '~/constants/key'
 
-const props = defineProps<{ by: string }>()
-
 const route = useRoute()
 const router = useRouter()
 
@@ -12,11 +10,11 @@ const handleSearchChange = debounce((ev: Event) => {
   const keyword = (ev.target as HTMLInputElement).value.trim()
 
   if (!keyword) {
-    return router.push({ query: omit(route.query, [FILTER_QUERY_KEY.SEARCH_BY, FILTER_QUERY_KEY.KEYWORD]) })
+    return router.push({ query: omit(route.query, FILTER_QUERY_KEY.KEYWORD) })
   }
 
   router.push({
-    query: { ...route.query, [FILTER_QUERY_KEY.SEARCH_BY]: props.by, [FILTER_QUERY_KEY.KEYWORD]: keyword }
+    query: { ...route.query, [FILTER_QUERY_KEY.KEYWORD]: keyword }
   })
 }, 300)
 </script>

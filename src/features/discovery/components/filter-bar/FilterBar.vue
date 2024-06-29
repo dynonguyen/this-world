@@ -20,7 +20,7 @@ const isMobile = useIsMobile()
 
     <div class="flex-v-center gap-2">
       <ClearFilter v-if="!isMobile.matched" />
-      <QuerySearchBar by="country" />
+      <QuerySearchBar />
       <ContinentFilter />
       <CountrySort />
     </div>

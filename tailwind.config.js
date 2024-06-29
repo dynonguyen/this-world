@@ -52,8 +52,9 @@ export default {
       {
         light: {
           ...themes.winter,
-          error: '#FF5962',
           primary: '#ec60ce',
+          secondary: '#FB7185',
+          error: '#FF5962',
 
           '--neutral-divider': '229 231 235', // gray.200
           '--neutral-main': '148 163 184' // gray.400
@@ -63,7 +64,9 @@ export default {
         dark: {
           ...themes.dark,
           primary: '#e86fbd',
+          secondary: '#FDA4AF',
           neutral: '#1c212b',
+
           'neutral-500': '#f0000',
           'neutral-content': '#d4d4d4',
           'base-100': '#2A303C',

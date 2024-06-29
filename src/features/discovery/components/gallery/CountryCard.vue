@@ -3,6 +3,7 @@ import { omit } from 'lodash-es'
 import { ref } from 'vue'
 import { LS_KEY } from '~/constants/key'
 import { PATH } from '~/constants/path'
+import { useCountryQuickView } from '~/features/country/stores/country-quick-view'
 import { useUserLocationStore } from '~/stores/user-location'
 import type { Country } from '~/types/Country'
 import type { LabelValueTuple } from '~/types/common'
@@ -13,6 +14,7 @@ type FavoriteStore = Record<string, string>
 const props = defineProps<Country>()
 
 const isVie = useUserLocationStore().userLocation.isVie
+const quickView = useCountryQuickView()
 const isFavorite = ref(
   Boolean(safeJsonParse<FavoriteStore>(localStorage.getItem(LS_KEY.FAVORITE_COUNTRIES))[props.cca2])
 )
@@ -24,7 +26,7 @@ const infos: LabelValueTuple<string>[] = [
   ['Area', `${numberWithCommas(props.area)} km²`, 'other-area']
 ]
 
-const handleShowQuickView = () => {}
+const handleShowQuickView = () => (quickView.cca2 = props.cca2)
 
 const handleCopyLink = (ev: MouseEvent) => {
   ev.stopPropagation()
@@ -42,9 +44,7 @@ const handleToggleFavorite = () => {
   const favoriteStore = safeJsonParse<FavoriteStore>(localStorage.getItem(LS_KEY.FAVORITE_COUNTRIES))
   localStorage.setItem(
     LS_KEY.FAVORITE_COUNTRIES,
-    JSON.stringify(
-      isFavorite.value ? omit(favoriteStore, props.cca2) : { ...favoriteStore, [props.cca2]: props.name.common }
-    )
+    JSON.stringify(isFavorite.value ? omit(favoriteStore, props.cca2) : { ...favoriteStore, [props.cca2]: '1' })
   )
 
   isFavorite.value = !isFavorite.value
@@ -53,7 +53,7 @@ const handleToggleFavorite = () => {
 
 <template>
   <div
-    class="bg-gray-50/10 dark:bg-gray-600/20 rounded-2xl p-4 border border-gray-200 dark:border-gray-700 hover:border-primary flex flex-col gap-3"
+    class="bg-gray-50/10 dark:bg-gray-600/20 rounded-2xl p-4 border border-gray-200 dark:border-gray-700 hover:shadow-md flex flex-col gap-3"
   >
     <!-- Flag -->
     <img
@@ -86,7 +86,7 @@ const handleToggleFavorite = () => {
 
     <!-- Actions -->
     <div
-      class="flex-v-center justify-end gap-2 [&_span]:text-neutral-main [&_span:hover]:text-primary [&_span]:size-5 [&_span]:transition-colors [&_span]:cursor-pointer"
+      class="flex-v-center justify-end gap-3 [&_span]:text-neutral-main [&_span:hover]:text-primary [&_span]:size-5 [&_span]:transition-colors [&_span]:cursor-pointer"
     >
       <div
         class="flex-v-center tooltip"
@@ -98,15 +98,17 @@ const handleToggleFavorite = () => {
 
       <span class="icon ph-speaker-high" @click="textToSpeech(name.common)"></span>
 
-      <span class="icon uil-info-circle"></span>
-
-      <div class="flex-v-center tooltip" data-tip="Copy share link" @click="handleCopyLink">
-        <span class="icon ph-link"></span>
+      <div class="flex-v-center tooltip" data-tip="Quick view">
+        <span class="icon uil-info-circle" @click="handleShowQuickView"></span>
       </div>
 
-      <div class="tooltip" data-tip="Go to detail page">
-        <span class="icon other-open" @click="$router.push({ path: PATH.COUNTRY.replace(':cca2', cca2) })"></span>
+      <div class="flex-v-center tooltip" data-tip="Copy share link">
+        <span class="icon ph-link" @click="handleCopyLink"></span>
       </div>
+
+      <RouterLink :to="PATH.COUNTRY.replace(':cca2', cca2)" class="flex-v-center tooltip" data-tip="Go to detail page">
+        <span class="icon other-open"></span>
+      </RouterLink>
     </div>
   </div>
 </template>

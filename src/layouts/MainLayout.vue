@@ -1,17 +1,23 @@
 <script setup lang="ts">
+import { onMounted, onUnmounted } from 'vue'
 import { RouterView } from 'vue-router'
 import ErrorBoundary from '~/components/ErrorBoundary.vue'
 import Loading from '~/components/Loading.vue'
+import CountryQuickView from '~/features/country/components/QuickView.vue'
 import { usePageLoading } from '~/hooks/usePageLoading'
 import { useCountriesStore } from '~/stores/countries'
 import { useIsMobile } from '~/stores/is-mobile'
 import BottomNavigation from './BottomNavigation.vue'
 import FooterBar from './FooterBar.vue'
+import ScrollTop from './ScrollTop.vue'
 import TopBar from './TopBar.vue'
 
 const isMobileStore = useIsMobile()
 const store = useCountriesStore()
 const isPageLoading = usePageLoading()
+
+onMounted(() => (document.body.style.overflow = 'hidden'))
+onUnmounted(() => (document.body.style.overflow = 'auto'))
 </script>
 
 <template>
@@ -20,7 +26,7 @@ const isPageLoading = usePageLoading()
       <TopBar />
     </div>
 
-    <div class="flex-1 flex flex-col overflow-y-auto overflow-x-hidden">
+    <div id="main-layout-content" class="flex-1 flex flex-col overflow-y-auto overflow-x-hidden">
       <div class="grow mx-auto p-4 max-w-7xl w-full">
         <Loading v-if="!store.initialized || isPageLoading" />
         <ErrorBoundary v-else>
@@ -35,4 +41,7 @@ const isPageLoading = usePageLoading()
 
     <BottomNavigation v-if="isMobileStore.matched" />
   </div>
+
+  <CountryQuickView />
+  <ScrollTop />
 </template>

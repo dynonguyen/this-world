@@ -25,8 +25,8 @@ const sort = computed<{ items: SortItem[]; current?: SortItem }>(() => {
     { label: 'Population', by: 'population.total', order: SortOrder.DESC },
     { label: 'Area', by: 'area', order: SortOrder.ASC },
     { label: 'Area', by: 'area', order: SortOrder.DESC },
-    { label: 'GDP 2022', by: 'gdp', order: SortOrder.ASC },
-    { label: 'GDP 2022', by: 'gdp', order: SortOrder.DESC }
+    { label: 'GDP 2022', by: 'gdp2022', order: SortOrder.ASC },
+    { label: 'GDP 2022', by: 'gdp2022', order: SortOrder.DESC }
   ].map(item => ({ ...item, active: sortedField === item.by && item.order === sortedOrder }))
   const sortedItem = items.find(item => item.active)
 

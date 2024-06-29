@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { useCountriesStore } from '~/stores/countries'
 import type { Country } from '~/types/Country'
 import CountryCard from './CountryCard.vue'
 
-const countries = useCountriesStore().countries as Country[]
+defineProps<{ countries: Country[] }>()
 </script>
 
 <template>

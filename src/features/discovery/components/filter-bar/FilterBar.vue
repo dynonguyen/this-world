@@ -11,16 +11,27 @@ const isMobile = useIsMobile()
 </script>
 
 <template>
-  <div class="flex-v-center flex-wrap gap-2 justify-between">
-    <div class="flex-v-center gap-2">
+  <div v-if="isMobile.matched" class="flex flex-col gap-2">
+    <div class="flex-v-center justify-between">
       <ViewAs />
-      <FavoriteButton />
-      <ClearFilter v-if="isMobile.matched" class="h-10" />
+
+      <div class="flex-v-center gap-2">
+        <FavoriteButton />
+        <ContinentFilter />
+        <CountrySort />
+        <ClearFilter class="h-10" />
+      </div>
     </div>
 
+    <QuerySearchBar />
+  </div>
+  <div v-else class="flex-v-center flex-wrap gap-2 justify-between">
+    <ViewAs />
+
     <div class="flex-v-center gap-2">
-      <ClearFilter v-if="!isMobile.matched" />
+      <ClearFilter />
       <QuerySearchBar />
+      <FavoriteButton />
       <ContinentFilter />
       <CountrySort />
     </div>

@@ -53,7 +53,7 @@ export default {
         light: {
           ...themes.winter,
           primary: '#ec60ce',
-          secondary: '#FB7185',
+          secondary: '#2fd4c8',
           error: '#FF5962',
 
           '--neutral-divider': '229 231 235', // gray.200
@@ -64,7 +64,7 @@ export default {
         dark: {
           ...themes.dark,
           primary: '#e86fbd',
-          secondary: '#FDA4AF',
+          secondary: '#44dbd0',
           neutral: '#1c212b',
 
           'neutral-500': '#f0000',

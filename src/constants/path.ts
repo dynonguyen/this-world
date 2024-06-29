@@ -1,7 +1,7 @@
 export const PATH = {
   OVERVIEW: '/overview',
   DISCOVERY: '/discovery',
-  COUNTRY: '/country/:cca2',
+  COUNTRY: '/country/:code',
   GAME: '/game',
   MAP: '/map'
 }

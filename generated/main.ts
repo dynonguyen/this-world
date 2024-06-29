@@ -3,7 +3,6 @@ import fs from 'fs'
 import path from 'path'
 import { z } from 'zod'
 import { Continent, Country } from '../src/types/Country'
-import { gdp2022 } from './gdp-2022'
 import { countries } from './raw'
 
 const stringRequired = z.string().trim().min(1)
@@ -115,7 +114,7 @@ function editData() {
   const data = countries.map(c => {
     return {
       ...c,
-      gdp2022: gdp2022[c.name.common] || gdp2022[c.name.official] || 0
+      borders: c.borders.map((b: string) => countries.find((c: any) => c.cca3 === b)?.cca2).filter(Boolean)
     } as Country
   })
 

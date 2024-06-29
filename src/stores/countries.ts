@@ -1,6 +1,6 @@
 import to from 'await-to-js'
 import { defineStore } from 'pinia'
-import { reactive, readonly, ref } from 'vue'
+import { readonly, ref, shallowRef } from 'vue'
 import { ENDPOINT } from '~/constants/endpoint'
 import { STORE_KEY } from '~/constants/key'
 import { type Country, type CountryMap } from '~/types/Country'
@@ -14,23 +14,28 @@ const fetchCountries = async (): Promise<Country[]> => {
 
 export const useCountriesStore = defineStore(STORE_KEY.COUNTRIES, () => {
   const initialized = ref(false)
-  const countries = reactive<Country[]>([])
-  const countryByCode = reactive<CountryMap>({})
-  const groupedByContinent = reactive<Record<string, string[]>>({})
+  const countries = shallowRef<Country[]>([])
+  const countryByCode = shallowRef<CountryMap>({})
+  const groupedByContinent = shallowRef<Record<string, string[]>>({})
 
   fetchCountries().then(data => {
+    const _countryByCode: CountryMap = {}
+    const _groupedByContinent: Record<string, string[]> = {}
+
     data.forEach(country => {
-      countries.push(country)
-      countryByCode[country.code] = country
+      _countryByCode[country.code] = country
 
       country.continents.forEach(continent => {
-        !groupedByContinent[continent]
-          ? (groupedByContinent[continent] = [country.code])
-          : groupedByContinent[continent].push(country.code)
+        !_groupedByContinent[continent]
+          ? (_groupedByContinent[continent] = [country.code])
+          : _groupedByContinent[continent].push(country.code)
       })
     })
 
     initialized.value = true
+    countries.value = data
+    countryByCode.value = _countryByCode
+    groupedByContinent.value = _groupedByContinent
   })
 
   return {

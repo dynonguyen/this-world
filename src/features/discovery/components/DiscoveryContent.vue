@@ -1,17 +1,21 @@
 <script setup lang="ts">
 import { get, orderBy } from 'lodash-es'
-import { computed, ref } from 'vue'
+import { computed, defineAsyncComponent, ref } from 'vue'
 import { useRoute } from 'vue-router'
+import DataNotFound from '~/components/DataNotFound.vue'
 import { SortOrder } from '~/constants/common'
 import { FILTER_QUERY_KEY, LS_KEY } from '~/constants/key'
 import { useCountriesStore } from '~/stores/countries'
 import type { Continent, Country } from '~/types/Country'
 import { countrySearch, safeJsonParse } from '~/utils/helpers'
-import DataNotFound from './DataNotFound.vue'
 import ViewAll from './ViewAll.vue'
 import { CONTINENT_FILTER_KEY } from './filter-bar/ContinentFilter.vue'
 import { FAVORITE_FILTER_KEY } from './filter-bar/FavoriteFilter.vue'
-import GalleryView from './gallery/GalleryView.vue'
+import { ViewType } from './filter-bar/ViewAs.vue'
+import GalleryView from './gallery-view/GalleryView.vue'
+
+const ListView = defineAsyncComponent(() => import('./list-view/ListView.vue'))
+const TableView = defineAsyncComponent(() => import('./TableView.vue'))
 
 const PREVIEW_COUNT = 12
 
@@ -30,7 +34,7 @@ const countries = computed<Country[]>(() => {
 
     if (!Object.keys(favorites).length) return []
 
-    countries = countries.filter(country => Boolean(favorites[country.cca2]))
+    countries = countries.filter(country => Boolean(favorites[country.code]))
   }
 
   // Continent filter
@@ -56,6 +60,12 @@ const countries = computed<Country[]>(() => {
 
   return countries
 })
+
+const viewAs = computed(() => route.query[FILTER_QUERY_KEY.VIEW_AS])
+
+const getSlicedCountries = () => {
+  return viewAll.value ? countries.value : countries.value.slice(0, PREVIEW_COUNT)
+}
 </script>
 
 <template>
@@ -64,7 +74,10 @@ const countries = computed<Country[]>(() => {
     <div class="text-sm md:text-md text-neutral-main mb-4">
       <b>{{ countries.length }}</b> countries and territories
     </div>
-    <GalleryView :countries="viewAll ? countries : countries.slice(0, PREVIEW_COUNT)" />
+
+    <ListView v-if="viewAs === ViewType.List" :countries="getSlicedCountries()" />
+    <TableView v-else-if="viewAs === ViewType.Table" :countries="getSlicedCountries()" />
+    <GalleryView v-else :countries="getSlicedCountries()" />
   </template>
 
   <ViewAll v-if="!viewAll && countries.length > PREVIEW_COUNT" @click="viewAll = true" class="mt-4" />

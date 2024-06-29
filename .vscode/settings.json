@@ -20,6 +20,5 @@
     "**/bower_components": true,
     "**/*.code-search": true,
     "**/factbooks/*.html": true
-  },
-  "typescript.tsserver.experimental.useVsCodeWatcher": false
+  }
 }

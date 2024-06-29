@@ -3,13 +3,11 @@ import { onMounted, onUnmounted } from 'vue'
 import { RouterView } from 'vue-router'
 import ErrorBoundary from '~/components/ErrorBoundary.vue'
 import Loading from '~/components/Loading.vue'
-import CountryQuickView from '~/features/country/components/QuickView.vue'
 import { usePageLoading } from '~/hooks/usePageLoading'
 import { useCountriesStore } from '~/stores/countries'
 import { useIsMobile } from '~/stores/is-mobile'
 import BottomNavigation from './BottomNavigation.vue'
 import FooterBar from './FooterBar.vue'
-import ScrollTop from './ScrollTop.vue'
 import TopBar from './TopBar.vue'
 
 const isMobileStore = useIsMobile()
@@ -41,7 +39,4 @@ onUnmounted(() => (document.body.style.overflow = 'auto'))
 
     <BottomNavigation v-if="isMobileStore.matched" />
   </div>
-
-  <CountryQuickView />
-  <ScrollTop />
 </template>

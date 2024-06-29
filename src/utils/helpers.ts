@@ -40,7 +40,9 @@ export function countrySearch(c: Country, keyword: string): boolean {
     c.cca2.toLowerCase().includes(lowerKeyword) ||
     c.name.common.toLowerCase().includes(lowerKeyword) ||
     c.name.official.toLowerCase().includes(lowerKeyword) ||
-    c.name.vieName.toLowerCase().includes(lowerKeyword) ||
-    c.capital.toLowerCase().includes(lowerKeyword)
+    c.capital.toLowerCase().includes(lowerKeyword) ||
+    c.fifaCode.toLowerCase().includes(lowerKeyword) ||
+    c.cioc.toLowerCase().includes(lowerKeyword) ||
+    c.name.vieName.toLowerCase().includes(lowerKeyword)
   )
 }

@@ -35,10 +35,10 @@ onUnmounted(() => {
 <template>
   <button
     v-if="show"
-    class="btn btn-circle btn-secondary fixed right-8 bottom-8 btn-sm tooltip"
+    class="btn btn-circle btn-secondary fixed right-8 bottom-24 md:bottom-8 btn-sm tooltip"
     data-tip="Scroll top"
     @click="handleScrollTop"
   >
-    <span class="icon ph-caret-up-fill"></span>
+    <span class="icon ph-caret-up-fill text-white"></span>
   </button>
 </template>

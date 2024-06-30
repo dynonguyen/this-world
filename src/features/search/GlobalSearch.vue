@@ -59,7 +59,7 @@ const handleShowQuickView = (id: string) => {
 
             <RouterLink
               :to="PATH.COUNTRY.replace(':id', c.id)"
-              class="hidden group-hover:flex-v-center"
+              class="md:hidden md:group-hover:flex-v-center"
               @click.stop="open = false"
             >
               <span class="icon size-4 text-neutral-main other-open shrink-0"></span>

@@ -11,6 +11,7 @@ import FooterBar from './FooterBar.vue'
 import TopBar from './TopBar.vue'
 
 import CountryQuickView from '~/features/country/components/QuickView.vue'
+import ScrollTop from './ScrollTop.vue'
 
 const isMobileStore = useIsMobile()
 const store = useCountriesStore()
@@ -42,4 +43,6 @@ onUnmounted(() => (document.body.style.overflow = 'auto'))
 
     <BottomNavigation v-if="isMobileStore.matched" />
   </div>
+
+  <ScrollTop class="sm:!hidden" />
 </template>

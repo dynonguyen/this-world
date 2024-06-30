@@ -35,8 +35,7 @@ onUnmounted(() => {
 <template>
   <button
     v-if="show"
-    class="btn btn-circle btn-secondary fixed right-8 bottom-24 md:bottom-8 btn-sm tooltip"
-    data-tip="Scroll top"
+    class="btn btn-circle btn-secondary fixed right-8 bottom-24 md:bottom-8 btn-sm"
     @click="handleScrollTop"
   >
     <span class="icon ph-caret-up-fill text-white"></span>

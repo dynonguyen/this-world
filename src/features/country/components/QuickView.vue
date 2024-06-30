@@ -34,7 +34,7 @@ useKeyPress('Escape', handleClose, open)
           </div>
         </template>
 
-        <div class="px-4 py-2 flex flex-col">
+        <div class="px-4 py-2 flex flex-col overflow-hidden">
           <CountryInfo v-bind="country" />
         </div>
 

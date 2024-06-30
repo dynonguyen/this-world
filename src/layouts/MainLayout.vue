@@ -10,6 +10,8 @@ import BottomNavigation from './BottomNavigation.vue'
 import FooterBar from './FooterBar.vue'
 import TopBar from './TopBar.vue'
 
+import CountryQuickView from '~/features/country/components/QuickView.vue'
+
 const isMobileStore = useIsMobile()
 const store = useCountriesStore()
 const isPageLoading = usePageLoading()
@@ -29,6 +31,7 @@ onUnmounted(() => (document.body.style.overflow = 'auto'))
         <Loading v-if="!store.initialized || isPageLoading" />
         <ErrorBoundary v-else>
           <RouterView />
+          <CountryQuickView />
         </ErrorBoundary>
       </div>
 

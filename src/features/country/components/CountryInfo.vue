@@ -25,8 +25,8 @@ const renderFifaWorldCup = (fifa?: CountryFifaMenWorldCup[]) => {
 const infos: LabelValueTuple<{ tooltip?: string } & LabelValueProps>[] = [
   ['Common name', props.name.common + (isVie ? ` (${props.name.vieName})` : '')],
   ['Official name', props.name.official],
-  ['Flag', `<img src="${props.flag}" class="size-6"' />`, { isHtml: true }],
-  ['Coat of arms', `<img src="${props.coatOfArms}" class="size-6"' />`, { isHtml: true }],
+  ['Flag', `<img src="${props.flag}" class="h-5"' />`, { isHtml: true }],
+  ['Coat of arms', `<img src="${props.coatOfArms}" class="h-5"' />`, { isHtml: true }],
   ['Capital', props.capital],
   ['Country code', `${props.cca2} / ${props.cca3}`, { tooltip: 'ISO 3166-1 alpha-2 / alpha-3 code' }],
   ['Population', numberWithCommas(props.population.total), { tooltip: `Updated: ${props.population.updatedAt}` }],

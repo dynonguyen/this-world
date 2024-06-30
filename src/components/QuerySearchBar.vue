@@ -9,13 +9,9 @@ const router = useRouter()
 const handleSearchChange = debounce((ev: Event) => {
   const keyword = (ev.target as HTMLInputElement).value.trim()
 
-  if (!keyword) {
-    return router.push({ query: omit(route.query, FILTER_QUERY_KEY.KEYWORD) })
-  }
+  if (!keyword) return router.push({ query: omit(route.query, FILTER_QUERY_KEY.KEYWORD) })
 
-  router.push({
-    query: { ...route.query, [FILTER_QUERY_KEY.KEYWORD]: keyword }
-  })
+  router.push({ query: { ...route.query, [FILTER_QUERY_KEY.KEYWORD]: keyword } })
 }, 300)
 </script>
 

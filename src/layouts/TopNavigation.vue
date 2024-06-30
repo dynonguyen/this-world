@@ -18,7 +18,7 @@ const navItems = computed(() =>
     <RouterLink v-for="item in navItems" :key="item.to" :to="item.to">
       <li class="text-sm font-medium hover:text-primary transition-colors" :class="{ 'text-primary': item.active }">
         <div class="flex-v-center gap-1">
-          <span class="icon size-4 hidden md:inline-block" :class="item.active ? item.activeIcon : item.icon"></span>
+          <span class="icon size-4 hidden lg:inline-block" :class="item.active ? item.activeIcon : item.icon"></span>
           <span>{{ item.label }}</span>
         </div>
       </li>

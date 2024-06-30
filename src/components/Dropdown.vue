@@ -6,7 +6,7 @@ import { vOutsideClick } from '~/directives/v-outside-click'
 defineProps<{ menuProps?: OlHTMLAttributes; actionProps?: Omit<HTMLAttributes, 'id'> }>()
 const open = defineModel<boolean>('open')
 
-const actionId = uniqueId('dropdown')
+const actionId = uniqueId('dropdown-')
 </script>
 
 <template>

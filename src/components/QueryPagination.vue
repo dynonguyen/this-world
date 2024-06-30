@@ -49,11 +49,15 @@ const handleChangePage = (page: number) => {
 </script>
 
 <template>
-  <div class="flex-v-center gap-2 py-4 flex-wrap justify-center flex-col md:flex-row md:justify-between">
+  <div
+    v-if="total > 0"
+    class="flex-v-center gap-2 py-4 flex-wrap justify-center flex-col md:flex-row md:justify-between"
+  >
     <div class="md:text-sm">
       <span class="hidden md:inline">Showing&nbsp;</span>
       <b>{{ (pagination.page - 1) * pagination.pageSize + 1 }}</b
-      >-<b>{{ pagination.page * pagination.pageSize }}</b> of <b>{{ total }}</b>
+      >-<b>{{ pagination.page * pagination.pageSize > total ? total : pagination.page * pagination.pageSize }}</b> of
+      <b>{{ total }}</b>
       <span class="hidden md:inline">&nbsp;results</span>
     </div>
 

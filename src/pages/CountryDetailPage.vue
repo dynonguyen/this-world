@@ -24,11 +24,9 @@ const country = countryByCode[(route.params.id as string)?.toUpperCase()] as Cou
 
         <CountryActions v-bind="country" class="!justify-start" hide-show-detail hide-quick-view>
           <template #start>
-            <div class="tooltip tooltip-right flex-v-center" data-tip="Go to discovery">
-              <RouterLink :to="PATH.DISCOVERY">
-                <span class="icon ph-arrow-left"></span>
-              </RouterLink>
-            </div>
+            <RouterLink :to="PATH.DISCOVERY" class="flex-v-center">
+              <span class="icon ph-arrow-left"></span>
+            </RouterLink>
           </template>
         </CountryActions>
       </div>

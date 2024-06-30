@@ -19,8 +19,6 @@ const handleShowQuickView = () => {
 }
 
 const handleCopyLink = (ev: MouseEvent) => {
-  ev.stopPropagation()
-
   const url = `${getEnv('VITE_BASE_URL')}${PATH.COUNTRY.replace(':id', props.id)}`
   const target = ev.currentTarget as HTMLElement
 
@@ -31,8 +29,6 @@ const handleCopyLink = (ev: MouseEvent) => {
 }
 
 const handleCopyName = (ev: MouseEvent) => {
-  ev.stopPropagation()
-
   const target = ev.currentTarget as HTMLElement
 
   navigator.clipboard.writeText(`${props.flagSymbol} - ${props.name.common} - ${props.id}`).then(() => {
@@ -68,11 +64,11 @@ const handleToggleFavorite = () => {
 
     <span class="icon ph-speaker-high" @click="textToSpeech(name.common)"></span>
 
-    <div class="flex-v-center tooltip" data-tip="Copy name & flag" @click="handleCopyName">
+    <div class="flex-v-center tooltip" data-tip="Copy name & flag" @click.stop="handleCopyName">
       <span class="icon ph-clipboard"></span>
     </div>
 
-    <div class="flex-v-center tooltip" data-tip="Copy share link" @click="handleCopyLink">
+    <div class="flex-v-center tooltip" data-tip="Copy share link" @click.stop="handleCopyLink">
       <span class="icon ph-link"></span>
     </div>
 

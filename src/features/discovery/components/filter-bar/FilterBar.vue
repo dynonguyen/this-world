@@ -16,10 +16,10 @@ const isMobile = useIsMobile()
       <ViewAs />
 
       <div class="flex-v-center gap-2">
+        <ClearFilter class="h-10" />
         <FavoriteButton />
         <ContinentFilter />
         <CountrySort />
-        <ClearFilter class="h-10" />
       </div>
     </div>
 

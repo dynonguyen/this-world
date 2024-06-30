@@ -21,7 +21,7 @@ const infos: LabelValueTuple<string>[] = [
 const handleShowQuickView = () => {
   const quickView = useCountryQuickView()
 
-  quickView.code = props.code
+  quickView.id = props.id
 }
 </script>
 
@@ -37,7 +37,7 @@ const handleShowQuickView = () => {
 
     <!-- Name -->
     <div class="flex flex-col gap-0.5 relative">
-      <h2 class="text-lg font-semibold">{{ name.common }} - {{ code }}</h2>
+      <h2 class="text-lg font-semibold">{{ name.common }} - {{ id }}</h2>
       <span v-if="isVie" class="text-xs text-neutral-main">{{ name.vieName }}</span>
     </div>
 

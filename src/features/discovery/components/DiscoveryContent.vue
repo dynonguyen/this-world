@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { get, orderBy } from 'lodash-es'
-import { computed, defineAsyncComponent, ref } from 'vue'
+import { computed, defineAsyncComponent } from 'vue'
 import { useRoute } from 'vue-router'
 import DataNotFound from '~/components/DataNotFound.vue'
+import QueryPagination from '~/components/QueryPagination.vue'
 import { SortOrder } from '~/constants/common'
 import { FILTER_QUERY_KEY, LS_KEY } from '~/constants/key'
 import { useCountriesStore } from '~/stores/countries'
 import type { Continent, Country } from '~/types/Country'
-import { countrySearch, safeJsonParse } from '~/utils/helpers'
-import ViewAll from './ViewAll.vue'
+import { countrySearch, safeJsonParse, toNumber } from '~/utils/helpers'
 import { CONTINENT_FILTER_KEY } from './filter-bar/ContinentFilter.vue'
 import { FAVORITE_FILTER_KEY } from './filter-bar/FavoriteFilter.vue'
 import { ViewType } from './filter-bar/ViewAs.vue'
@@ -17,14 +17,14 @@ import GalleryView from './gallery-view/GalleryView.vue'
 const ListView = defineAsyncComponent(() => import('./list-view/ListView.vue'))
 const TableView = defineAsyncComponent(() => import('./TableView.vue'))
 
-const PREVIEW_COUNT = 12
+const PAGE_SIZE = 12
 
 const countriesStore = useCountriesStore()
 const route = useRoute()
 
-const viewAll = ref(false)
+const viewAs = computed(() => route.query[FILTER_QUERY_KEY.VIEW_AS])
 
-const countries = computed<Country[]>(() => {
+const data = computed(() => {
   let countries = countriesStore.countries as Country[]
   const query = route.query
 
@@ -32,9 +32,9 @@ const countries = computed<Country[]>(() => {
   if (Number(query[FAVORITE_FILTER_KEY]) === 1) {
     const favorites = safeJsonParse<Record<string, string>>(localStorage.getItem(LS_KEY.FAVORITE_COUNTRIES))
 
-    if (!Object.keys(favorites).length) return []
+    if (!Object.keys(favorites).length) return { countries: [], total: 0 }
 
-    countries = countries.filter(country => Boolean(favorites[country.code]))
+    countries = countries.filter(country => Boolean(favorites[country.id]))
   }
 
   // Continent filter
@@ -58,27 +58,19 @@ const countries = computed<Country[]>(() => {
     if (order === SortOrder.DESC) countries.reverse()
   }
 
-  return countries
+  const page = toNumber(route.query[FILTER_QUERY_KEY.PAGE], 1)
+
+  return { countries: countries.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE), total: countries.length }
 })
-
-const viewAs = computed(() => route.query[FILTER_QUERY_KEY.VIEW_AS])
-
-const getSlicedCountries = () => {
-  return viewAll.value ? countries.value : countries.value.slice(0, PREVIEW_COUNT)
-}
 </script>
 
 <template>
-  <DataNotFound v-if="!countries.length" />
+  <DataNotFound v-if="!data.total" />
   <template v-else>
-    <div class="text-sm md:text-md text-neutral-main mb-4">
-      <b>{{ countries.length }}</b> countries and territories
-    </div>
-
-    <ListView v-if="viewAs === ViewType.List" :countries="getSlicedCountries()" />
-    <TableView v-else-if="viewAs === ViewType.Table" :countries="getSlicedCountries()" />
-    <GalleryView v-else :countries="getSlicedCountries()" />
+    <ListView v-if="viewAs === ViewType.List" :countries="data.countries" />
+    <TableView v-else-if="viewAs === ViewType.Table" :countries="data.countries" />
+    <GalleryView v-else :countries="data.countries" />
   </template>
 
-  <ViewAll v-if="!viewAll && countries.length > PREVIEW_COUNT" @click="viewAll = true" class="mt-4" />
+  <QueryPagination :total="data.total" :page-size="PAGE_SIZE" class="mt-4" />
 </template>

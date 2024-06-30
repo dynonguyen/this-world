@@ -11,10 +11,10 @@ import CountryInfo from './CountryInfo.vue'
 const quickViewStore = useCountryQuickView()
 const countryByCode = useCountriesStore().countryByCode
 
-const country = computed(() => countryByCode[quickViewStore.code] as Country)
-const open = computed(() => Boolean(quickViewStore.code))
+const country = computed(() => countryByCode[quickViewStore.id] as Country)
+const open = computed(() => Boolean(quickViewStore.id))
 
-const handleClose = () => (quickViewStore.code = '')
+const handleClose = () => (quickViewStore.id = '')
 
 useKeyPress('Escape', handleClose, open)
 </script>

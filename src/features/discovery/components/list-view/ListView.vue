@@ -9,7 +9,7 @@ defineProps<{ countries: Country[] }>()
   <div id="country-list-view" class="flex flex-col gap-4">
     <ListItem
       v-for="country in countries"
-      :key="country.code"
+      :key="country.id"
       v-bind="country"
       class="border-b border-dashed pb-4 last:border-b-0"
     />

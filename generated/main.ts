@@ -1,5 +1,7 @@
+/* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import fs from 'fs'
+import { omit } from 'lodash-es'
 import path from 'path'
 import { z } from 'zod'
 import { Continent, Country } from '../src/types/Country'
@@ -17,7 +19,7 @@ const validationSchema = z.object({
   }),
   cca2: stringRequired,
   cca3: stringRequired,
-  code: stringRequired,
+  id: stringRequired,
   cioc: stringOptional,
   coatOfArms: stringOptional,
   continents: z.array(z.nativeEnum(Continent)),
@@ -45,9 +47,8 @@ const validationSchema = z.object({
     updatedAt: stringOptional,
     total: z.number()
   }),
-  region: stringRequired,
+  region: stringOptional,
   startOfWeek: z.union([z.literal('monday'), z.literal('sunday'), z.literal('saturday')]),
-  subregion: stringOptional,
   timezones: z.array(stringRequired).min(1),
   tld: z.array(stringRequired),
   unMember: z.boolean(),
@@ -112,10 +113,7 @@ async function validateAndRewrite(write = true) {
 
 function editData() {
   const data = countries.map(c => {
-    return {
-      ...c,
-      borders: c.borders.map((b: string) => countries.find((c: any) => c.cca3 === b)?.cca2).filter(Boolean)
-    } as Country
+    return omit(c, 'subregion') as Country
   })
 
   generateCountriesFile(data)

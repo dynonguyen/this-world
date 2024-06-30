@@ -5,7 +5,12 @@ import { NAVIGATION } from '~/constants/common'
 
 const route = useRoute()
 
-const navItems = computed(() => NAVIGATION.map(item => ({ ...item, active: route.path.includes(item.to) })))
+const navItems = computed(() =>
+  NAVIGATION.map(item => ({
+    ...item,
+    active: route.path.includes(item.to) || item.extendActivePaths?.some(p => route.path.includes(p))
+  }))
+)
 </script>
 
 <template>

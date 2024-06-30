@@ -46,3 +46,14 @@ export function countrySearch(c: Country, keyword: string): boolean {
     c.name.vieName.toLowerCase().includes(lowerKeyword)
   )
 }
+
+export function toNumber(value: any, fallbackValue: number, opts?: { min?: number; max?: number }) {
+  const num = Number(value)
+
+  if (isNaN(num)) return fallbackValue
+
+  if (opts?.min !== undefined && num < opts.min) return fallbackValue
+  if (opts?.max !== undefined && num > opts.max) return fallbackValue
+
+  return num
+}

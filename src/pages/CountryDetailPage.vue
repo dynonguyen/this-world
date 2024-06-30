@@ -10,7 +10,7 @@ import type { Country } from '~/types/Country'
 
 const countryByCode = useCountriesStore().countryByCode
 const route = useRoute()
-const country = countryByCode[(route.params.code as string)?.toUpperCase()] as Country
+const country = countryByCode[(route.params.id as string)?.toUpperCase()] as Country
 </script>
 
 <template>
@@ -24,7 +24,7 @@ const country = countryByCode[(route.params.code as string)?.toUpperCase()] as C
 
         <CountryActions v-bind="country" class="!justify-start" hide-show-detail hide-quick-view>
           <template #start>
-            <div class="tooltip flex-v-center" data-tip="Go back">
+            <div class="tooltip tooltip-right flex-v-center" data-tip="Go to discovery">
               <RouterLink :to="PATH.DISCOVERY">
                 <span class="icon ph-arrow-left"></span>
               </RouterLink>

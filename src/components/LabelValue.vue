@@ -13,15 +13,15 @@ withDefaults(defineProps<LabelValueProps>(), { labelWidth: 120 })
 </script>
 
 <template>
-  <div v-if="Boolean(value)" class="label-value flex flex-col gap-1 sm:flex-row sm:gap-2">
+  <div v-if="Boolean(value)" class="lv-root flex flex-col gap-1 sm:flex-row sm:gap-2">
     <div
-      class="text-sm font-normal text-neutral-main shrink-0 break-words"
+      class="lv-label text-sm font-normal text-neutral-main shrink-0 break-words"
       :style="{ width: `${$props.labelWidth}px` }"
       v-bind="attrs?.label"
     >
       <slot name="label">{{ $props.label }}:</slot>
     </div>
-    <div class="text-sm font-medium grow" v-bind="attrs?.value">
+    <div class="lv-value text-sm font-medium grow" v-bind="attrs?.value">
       <slot name="value">
         <div v-if="isHtml" v-html="value"></div>
         <template v-else>{{ value }}</template>

@@ -23,12 +23,12 @@ export const useCountriesStore = defineStore(STORE_KEY.COUNTRIES, () => {
     const _groupedByContinent: Record<string, string[]> = {}
 
     data.forEach(country => {
-      _countryByCode[country.code] = country
+      _countryByCode[country.id] = country
 
       country.continents.forEach(continent => {
         !_groupedByContinent[continent]
-          ? (_groupedByContinent[continent] = [country.code])
-          : _groupedByContinent[continent].push(country.code)
+          ? (_groupedByContinent[continent] = [country.id])
+          : _groupedByContinent[continent].push(country.id)
       })
     })
 

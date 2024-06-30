@@ -7,6 +7,6 @@ defineProps<{ countries: Country[] }>()
 
 <template>
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-6">
-    <CountryCard v-for="country in countries" :key="country.code" v-bind="country" />
+    <CountryCard v-for="country in countries" :key="country.id" v-bind="country" />
   </div>
 </template>

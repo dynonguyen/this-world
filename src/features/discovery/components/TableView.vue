@@ -9,9 +9,9 @@ import CountryActions from './CountryActions.vue'
 defineProps<{ countries: Country[] }>()
 const isVie = useUserLocationStore().userLocation.isVie
 
-const handleShowQuickView = (code: string) => {
+const handleShowQuickView = (id: string) => {
   const quickView = useCountryQuickView()
-  quickView.code = code
+  quickView.id = id
 }
 </script>
 
@@ -31,14 +31,14 @@ const handleShowQuickView = (code: string) => {
       </thead>
 
       <tbody>
-        <tr v-for="c in countries" :key="c.code">
+        <tr v-for="c in countries" :key="c.id">
           <td class="min-w-48">
             <div class="flex-v-center gap-2">
               <img
                 class="size-5 rounded-full object-cover object-center cursor-pointer"
                 :src="c.flag"
                 :alt="c.name.common"
-                @click="handleShowQuickView(c.code)"
+                @click="handleShowQuickView(c.id)"
               />
               <div class="flex flex-col">
                 {{ c.name.common }}
@@ -46,7 +46,7 @@ const handleShowQuickView = (code: string) => {
               </div>
             </div>
           </td>
-          <td class="min-w-20">{{ c.code }}</td>
+          <td class="min-w-20">{{ c.id }}</td>
           <td class="min-w-32">{{ c.capital }}</td>
           <td class="min-w-40">{{ c.continents.map(c => continentMapping(c).name).join(', ') }}</td>
           <td>{{ numberWithCommas(c.population.total) }}</td>

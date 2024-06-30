@@ -17,5 +17,7 @@ export const FILTER_QUERY_KEY = {
   SORT_ORDER: 'order',
   VIEW_AS: 'view_as',
   SEARCH_BY: 'search_by',
-  KEYWORD: 'keyword'
+  KEYWORD: 'keyword',
+  PAGE: 'page',
+  PAGE_SIZE: 'page_size'
 }

@@ -55,6 +55,7 @@ export default {
           primary: '#ec60ce',
           secondary: '#2fd4c8',
           error: '#FF5962',
+          'primary-content': '#f9f9f9',
 
           '--neutral-divider': '229 231 235', // gray.200
           '--neutral-main': '148 163 184' // gray.400

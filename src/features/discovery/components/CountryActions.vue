@@ -12,18 +12,16 @@ type FavoriteStore = Record<string, string>
 const props = defineProps<Country & { hideShowDetail?: boolean; hideQuickView?: boolean }>()
 const quickView = useCountryQuickView()
 
-const isFavorite = ref(
-  Boolean(safeJsonParse<FavoriteStore>(localStorage.getItem(LS_KEY.FAVORITE_COUNTRIES))[props.code])
-)
+const isFavorite = ref(Boolean(safeJsonParse<FavoriteStore>(localStorage.getItem(LS_KEY.FAVORITE_COUNTRIES))[props.id]))
 
 const handleShowQuickView = () => {
-  quickView.code = props.code
+  quickView.id = props.id
 }
 
 const handleCopyLink = (ev: MouseEvent) => {
   ev.stopPropagation()
 
-  const url = `${getEnv('VITE_BASE_URL')}${PATH.COUNTRY.replace(':code', props.code)}`
+  const url = `${getEnv('VITE_BASE_URL')}${PATH.COUNTRY.replace(':id', props.id)}`
   const target = ev.currentTarget as HTMLElement
 
   navigator.clipboard.writeText(url).then(() => {
@@ -37,7 +35,7 @@ const handleCopyName = (ev: MouseEvent) => {
 
   const target = ev.currentTarget as HTMLElement
 
-  navigator.clipboard.writeText(`${props.flagSymbol} - ${props.name.common} - ${props.code}`).then(() => {
+  navigator.clipboard.writeText(`${props.flagSymbol} - ${props.name.common} - ${props.id}`).then(() => {
     target?.setAttribute('data-tip', 'Copied to clipboard!')
     setTimeout(() => target?.setAttribute('data-tip', 'Copy name & flag'), 3000)
   })
@@ -47,7 +45,7 @@ const handleToggleFavorite = () => {
   const favoriteStore = safeJsonParse<FavoriteStore>(localStorage.getItem(LS_KEY.FAVORITE_COUNTRIES))
   localStorage.setItem(
     LS_KEY.FAVORITE_COUNTRIES,
-    JSON.stringify(isFavorite.value ? omit(favoriteStore, props.code) : { ...favoriteStore, [props.code]: '1' })
+    JSON.stringify(isFavorite.value ? omit(favoriteStore, props.id) : { ...favoriteStore, [props.id]: '1' })
   )
 
   isFavorite.value = !isFavorite.value
@@ -84,10 +82,10 @@ const handleToggleFavorite = () => {
 
     <RouterLink
       v-if="!hideShowDetail"
-      :to="PATH.COUNTRY.replace(':code', code)"
+      :to="PATH.COUNTRY.replace(':id', id)"
       class="flex-v-center tooltip"
       data-tip="Go to detail page"
-      @click="quickView.code = ''"
+      @click="quickView.id = ''"
     >
       <span class="icon other-open"></span>
     </RouterLink>

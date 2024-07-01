@@ -57,3 +57,17 @@ export function toNumber(value: any, fallbackValue: number, opts?: { min?: numbe
 
   return num
 }
+
+export function detectDevicePlatform() {
+  const userAgent = navigator.userAgent.toLowerCase()
+
+  if (userAgent.includes('win')) {
+    return 'win'
+  } else if (userAgent.includes('mac')) {
+    return 'mac'
+  } else if (userAgent.includes('linux')) {
+    return 'linux'
+  } else {
+    return 'other'
+  }
+}

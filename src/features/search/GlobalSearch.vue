@@ -1,17 +1,19 @@
 <script setup lang="ts">
 import { debounce } from 'lodash-es'
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import DataNotFound from '~/components/DataNotFound.vue'
 import Dropdown from '~/components/Dropdown.vue'
 import { PATH } from '~/constants/path'
+import { useKeyPress } from '~/hooks/useKeyPress'
 import { useCountriesStore } from '~/stores/countries'
 import type { Country } from '~/types/Country'
-import { countrySearch } from '~/utils/helpers'
+import { countrySearch, detectDevicePlatform } from '~/utils/helpers'
 import { useCountryQuickView } from '../country/stores/country-quick-view'
 
 const MAX_RESULTS = 8
 
 const countriesStore = useCountriesStore()
+const platform = detectDevicePlatform()
 
 const open = ref(false)
 const results = ref<Country[]>([])
@@ -27,12 +29,28 @@ const handleSearch = debounce((ev: Event) => {
     .slice(0, MAX_RESULTS) as Country[]
 }, 250)
 
-const handleShowQuickView = (id: string) => {
-  const quickView = useCountryQuickView()
-  quickView.id = id
+const handleClose = () => {
   open.value = false
   inputRef.value?.blur()
 }
+
+const handleShowQuickView = (id: string) => {
+  const quickView = useCountryQuickView()
+  quickView.id = id
+  handleClose()
+}
+
+useKeyPress(
+  'k',
+  ev => {
+    if ((platform === 'mac' && ev.metaKey) || (platform !== 'mac' && ev.ctrlKey)) {
+      open.value = true
+      inputRef.value?.focus()
+    }
+  },
+  computed(() => !open.value)
+)
+useKeyPress('Escape', handleClose, open)
 </script>
 
 <template>
@@ -40,6 +58,7 @@ const handleShowQuickView = (id: string) => {
     <template #action>
       <div className="input input-ghost bg-gray-100 dark:bg-gray-700 input-sm flex-v-center gap-2 w-full">
         <span class="icon uil-search text-base-content/75"></span>
+
         <input
           ref="inputRef"
           @click="open = true"
@@ -48,6 +67,11 @@ const handleShowQuickView = (id: string) => {
           placeholder="Search a country"
           @input="handleSearch"
         />
+
+        <div class="flex-v-center gap-0.5 opacity-40 shrink-0">
+          <kbd class="kbd kbd-sm">{{ platform === 'mac' ? '⌘' : '^' }}</kbd>
+          <kbd class="kbd kbd-sm">K</kbd>
+        </div>
       </div>
     </template>
 

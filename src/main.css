@@ -15,4 +15,7 @@
   .dropdown-content a[data-active='true'] {
     @apply !text-neutral-content !bg-neutral;
   }
+  ul li.focused {
+    @apply bg-base-content/20 rounded-lg;
+  }
 }

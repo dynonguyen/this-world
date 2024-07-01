@@ -15,6 +15,7 @@ const countriesStore = useCountriesStore()
 
 const open = ref(false)
 const results = ref<Country[]>([])
+const inputRef = ref<HTMLInputElement | null>(null)
 
 const handleSearch = debounce((ev: Event) => {
   const keyword = (ev.target as HTMLInputElement).value.trim()
@@ -30,18 +31,23 @@ const handleShowQuickView = (id: string) => {
   const quickView = useCountryQuickView()
   quickView.id = id
   open.value = false
+  inputRef.value?.blur()
 }
 </script>
 
 <template>
   <Dropdown v-model:open="open" class="w-full" :menu-props="{ class: 'mt-1 w-full' }">
     <template #action>
-      <div
-        className="input input-ghost bg-gray-100 dark:bg-gray-700 input-sm flex-v-center gap-2 w-full"
-        @click="open = true"
-      >
+      <div className="input input-ghost bg-gray-100 dark:bg-gray-700 input-sm flex-v-center gap-2 w-full">
         <span class="icon uil-search text-base-content/75"></span>
-        <input type="text" className="grow" placeholder="Search a country" @input="handleSearch" />
+        <input
+          ref="inputRef"
+          @click="open = true"
+          type="text"
+          className="grow"
+          placeholder="Search a country"
+          @input="handleSearch"
+        />
       </div>
     </template>
 

@@ -13,7 +13,8 @@
     "pinia",
     "tailwindcss",
     "unitednations",
-    "VITE"
+    "VITE",
+    "zoomable"
   ],
   "search.exclude": {
     "**/node_modules": true,

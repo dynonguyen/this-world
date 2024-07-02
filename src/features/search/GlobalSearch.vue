@@ -68,7 +68,7 @@ useKeyPress('Escape', handleClose, open)
           @input="handleSearch"
         />
 
-        <div class="flex-v-center gap-0.5 opacity-40 shrink-0">
+        <div class="gap-0.5 opacity-40 shrink-0 hidden sm:flex-v-center">
           <kbd class="kbd kbd-sm">{{ platform === 'mac' ? '⌘' : '^' }}</kbd>
           <kbd class="kbd kbd-sm">K</kbd>
         </div>

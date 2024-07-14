@@ -7,7 +7,7 @@ import type { Country } from '~/types/Country'
 import { withAssets } from '~/utils/helpers'
 import { generateQuestions } from '../utils/helper'
 
-const DELAY_TIME = 2000
+const DELAY_TIME = 1000
 const HINT_MAP: Record<string, [string] | [string, (c: Country) => string]> = {
   continent: ['Continents', c => c.continents.join(', ')],
   capital: ['Capital'],

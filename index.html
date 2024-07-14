@@ -1,22 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title><%= appName %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <link rel="icon" href="/img/logo.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    <%= appName %>
-  </title>
+    <link rel="icon" href="/img/logo.png" />
+    <link rel="apple-touch-icon" href="/img/logo.png" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap" rel="stylesheet" />
 
-<body>
-  <div id="app"></div>
-  <script type="module" src="/src/main.ts"></script>
-</body>
+    <meta name="application-name" content="<%= appName %>" />
+    <meta
+      name="description"
+      content="The website helps consolidate knowledge about countries around the world. The data was last updated in June 2024."
+    />
 
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/img/logo.png" />
+    <meta property="og:title" content="Meta Tags — Preview, Edit and Generate" />
+    <meta
+      property="og:description"
+      content="The website helps consolidate knowledge about countries around the world. The data was last updated in June 2024."
+    />
+    <meta property="og:image" content="/img/logo.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="/img/logo.png" />
+    <meta property="twitter:title" content="Meta Tags — Preview, Edit and Generate" />
+    <meta
+      property="twitter:description"
+      content="The website helps consolidate knowledge about countries around the world. The data was last updated in June 2024."
+    />
+    <meta property="twitter:image" content="/img/logo.png" />
+  </head>
+
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>

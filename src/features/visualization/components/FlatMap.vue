@@ -91,6 +91,7 @@ onUnmounted(() => {
         :minZoom="0.5"
         :maxZoom="4"
         :initialZoom="1"
+        :touchEnabled="false"
       >
         <BlankMap v-once />
       </VueZoomable>

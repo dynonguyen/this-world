@@ -7,7 +7,7 @@ const OverviewPage = () => import('~/pages/OverviewPage.vue')
 const DiscoveryPage = () => import('~/pages/DiscoveryPage.vue')
 const CountryDetailPage = () => import('~/pages/CountryDetailPage.vue')
 const MapPage = () => import('~/pages/MapPage.vue')
-const ComingSoonPage = () => import('~/pages/ComingSoonPage.vue')
+const GuessingGamePage = () => import('~/pages/GuessingGamePage.vue')
 
 // -----------------------------
 const routes: Readonly<RouteRecordRaw[]> = [
@@ -19,7 +19,7 @@ const routes: Readonly<RouteRecordRaw[]> = [
       { path: PATH.DISCOVERY, name: 'Discovery', component: DiscoveryPage },
       { path: PATH.COUNTRY, name: 'Country', component: CountryDetailPage },
       { path: PATH.MAP, name: 'Map', component: MapPage },
-      { path: PATH.GAME, name: 'Game', component: ComingSoonPage },
+      { path: PATH.GAME, name: 'Guessing Game', component: GuessingGamePage },
       { path: '', redirect: PATH.OVERVIEW },
       { path: '/:p*', redirect: PATH.OVERVIEW }
     ]
